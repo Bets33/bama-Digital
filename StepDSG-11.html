@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>StepDSG-11</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+<style> /*------CSS Part-Starts-Here-------------------------*/
+
+:root{
+    --primary: rgb(1, 44, 118);
+    --blue: rgb(35, 107, 244);
+    --blue2: rgb(0, 41, 92);
+    --blue3: rgb(230, 237, 255);
+    --blue4: rgb(158, 191, 250);
+    --purple: rgb(100 82 243);
+    --purple2: rgb(77 59 181);
+    --purple3: rgb(204 196 250);
+    --tourquoise: rgb(92 236 211);
+    --tourquoise2: rgb(18 105 94);
+    --tourquoise3: rgb(163 245 232);
+    --black: rgb(0 0 0);
+    --metal: rgb(43, 58, 56);
+    --silver: rgb(187, 199, 204);
+    --gray: rgb(230, 236, 239);
+    --white-gray: rgb(251, 251, 251);
+    --white: rgb(255, 255, 255);
+    --links: rgb(85, 26, 139);
+    --url-image: url('./imgs/CardDSG-1.png'); /*CardDSG-5*/
+}
+
+* {
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Figtree', sans-serif;
+  }
+
+  .container4{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+/*--------Header-Banner-------------------------------------------------*/
+
+  .front{
+    display: grid;
+    min-height: 320px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./imgs/bannerDSG-11.png"); /*Local Link*/
+    /*background-image: url("https://ttectalent.sumtotal.host/Core/7903.sumtfile");*/ /*PROD Link*/ /*BannerDSG-12*/
+    /*background-image: url("https://ttectalent.stage.sumtotal.host/Core/6288.sumtfile");*/ /*STAGE Link*/
+    border-bottom: var(--blue) 7px solid; 
+  }
+
+.front_title{
+  max-width: 1500px;
+  color: var(--blue);
+  margin-bottom: 20px;
+  }
+
+
+.front_text{
+  color: var(--blue);
+  margin-bottom: -30px;
+  font-size: large;
+}
+
+.back{
+  margin-bottom: 20px;
+}
+
+.btn_back{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: left;
+  gap: .5em;
+  color: var(--blue);
+    
+}
+
+.btn_back::before{
+  content: url("./imgs_V2/backDSG-2.png"); /*Local link*/
+  /*content: url("https://ttectalent.sumtotal.host/Core/7799.sumtfile");*/ /*PROD link*/ /*backDSG-2*/
+  /*content: url("https://ttectalent.stage.sumtotal.host/Core/6305.sumtfile");*/ /*STAGE link*/
+}
+
+
+
+/*---------CARDS-Image-and-links-----------------------------------------------*/
+
+.container-cards{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+
+  .card{
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 1.5s;
+  }
+
+  .card:nth-of-type(2){
+    --url-image: url('./imgs/CardDSG-1.png'); /*CardDSG-6*/
+  }
+
+  .card:nth-of-type(3){
+    --url-image: url('./imgs/CardDSG-1.png'); /*CardDSG-7*/
+  }
+
+  .card:nth-of-type(4){
+    --url-image: url('./imgs/CardDSG-1.png'); /*CardDSG-8*/
+  }
+
+  .card::before{
+    content: "";
+    border-radius: 10px 10px 0 0;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-image: var(--url-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card_container{
+    padding: 30px 20px;
+    background: #ffffff;
+    border-radius: 0 0 10px 10px;
+    flex-grow: 1;  /*This option aline the buttons*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card_name{
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--blue);
+  }
+
+  .card_name2{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .card_text{
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .card_copy{
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .card_cta{
+    background: var(--blue);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+    margin: 5px auto;
+    width: 100px;
+    border-radius: 6px;
+  }
+
+.number_box{
+  width: 40px;
+  height: 40px;
+  background-color: var(--blue);
+  border-radius: 0 0 10px 0;
+}
+
+.number_text{
+  text-align: center;
+  color: var(--white);
+  font-size: large;
+  font-weight: bold;
+  text-align:center;
+  margin-top: 5px;
+}
+
+  .blocked{
+    background-color: #e7e8e5;
+    pointer-events: none;
+}
+
+/*--------@medias---------------------------------------------------*/
+
+@media (max-width: 960px ){
+  .btn_back{
+    margin-top: 90px;
+  }
+  .front_title{
+    font-size:1.7rem;
+  }
+  
+}
+
+/*--------CSS Part Ends Here------------*/
+</style>
+
+</head>
+
+<!--------HTML----------------------------------------------------->
+
+  <body>
+
+<!--------Header Banner--------->
+
+<header class="front">
+  <div class="front_banner container4">
+
+    <div class="back">
+      <a class="btn_back" href="StepDSG-4.html" target="_top">How We Lead</a>
+    </div>
+    
+    <h1 class="front_title">Getting Started</h1>
+    <p class="front_text"></p>
+
+  </div>
+
+</header>
+
+<!--------CARDS-Image-and-links----Udemy-Course-2----->
+
+
+  <section class="container-cards cards">
+
+    <div class="card animate__animated animate__fadeIn">   <!-- Card 1 -->
+      <div class="number_box">
+      <p class="number_text">1</p>
+    </div>
+      <div class="card_container">
+        <h2 class="card_name">Welcome to Your Journey</h2>
+        <div class="card_text">
+          <p class="card_copy">Proin tempus risus id ipsum tristique tincidunt vestibulum mi dolor.</p>
+        </div>
+        <a href="#" target="" class="card_cta">Go</a>
+      </div>
+    </div>
+
+    <div class="card animate__animated animate__fadeIn">  <!-- Card 2 -->
+      <div class="number_box">
+        <p class="number_text">2</p>
+      </div>
+      <div class="card_container">
+        <h2 class="card_name">Our Career Framework</h2>
+        <div class="card_text">
+          <p class="card_copy">Proin tempus risus id ipsum tristique tincidunt. Vestibulum mi dolor, interdum non leo sit</p>
+        </div>
+        <a href="#" target="" class="card_cta">GO</a>
+      </div>
+    </div>
+
+    <div class="card animate__animated animate__fadeIn">  <!-- Card 3 -->
+      <div class="number_box">
+        <p class="number_text">3</p>
+      </div>
+      <div class="card_container">
+        <h2 class="card_name">About Total Rewards</h2>
+        <div class="card_text">
+          <p class="card_copy">Proin tempus risus id ipsum tristique tincidunt vestibulum mi dolor.</p>
+        </div>
+        <a href="#" target="" class="card_cta">Go</a>
+      </div>
+    </div>
+
+    <div class="card animate__animated animate__fadeIn">  <!-- Card 4 -->
+      <div class="number_box">
+        <p class="number_text">4</p>
+      </div>
+      <div class="card_container">
+        <h2 class="card_name">Managing Performance</h2>
+        <div class="card_text">
+          <p class="card_copy">Proin tempus risus id ipsum tristique tincidunt vestibulum mi dolor.</p>
+        </div>
+        <a href="#" target="" class="card_cta">Go</a>
+      </div>
+    </div>
+
+
+</section>
+
+
+  </body> <!--------------HTML-Ends-Here------------------>
+  
+</html>
+

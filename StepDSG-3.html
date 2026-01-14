@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>StepDSG-3-HWE</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+<style> /*------CSS Part-Starts-Here-------------------------*/
+
+:root{
+    --primary: rgb(1, 44, 118);
+    --blue: rgb(35, 107, 244);
+    --blue2: rgb(0, 41, 92);
+    --blue3: rgb(230, 237, 255);
+    --blue4: rgb(158, 191, 250);
+    --purple: rgb(100 82 243);
+    --purple2: rgb(77 59 181);
+    --purple3: rgb(204 196 250);
+    --tourquoise: rgb(92 236 211);
+    --tourquoise2: rgb(18 105 94);
+    --tourquoise3: rgb(163 245 232);
+    --black: rgb(0 0 0);
+    --metal: rgb(43, 58, 56);
+    --silver: rgb(187, 199, 204);
+    --gray: rgb(230, 236, 239);
+    --white-gray: rgb(251, 251, 251);
+    --white: rgb(255, 255, 255);
+    --links: rgb(85, 26, 139);
+}
+
+* {
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Figtree', sans-serif;
+  }
+
+  .container3{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+/*--------Header-Banner-------------------------------------------------*/
+
+.front{
+    min-height: 250px;
+    background-image: url("./imgs/bannerDSG-2.png"); /*Local link*/
+    /*background-image: url("https://ttectalent.sumtotal.host/Core/6392.sumtfile");*/ /*PROD Link*/
+    /*background-image: url("https://ttectalent.stage.sumtotal.host/Core/6337.sumtfile");*/ /*STAGE Link*/
+    background-position: center;
+    background-size: cover;
+    border-bottom: var(--blue) 7px solid; 
+}
+
+.front_title{
+    max-width: 1300px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+
+.front_text{
+    color: var(--white);
+    font-size: large;
+}
+
+.back{
+  margin-bottom: 20px;
+}
+
+.btn_back{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: left;
+    gap: .5em;
+    color: var(--white);
+    
+}
+
+.btn_back::before{
+  content: url("./imgs_V2/backDSG.png"); /*Local link*/
+  /*content: url("https://ttectalent.sumtotal.host/Core/6322.sumtfile");*/ /*PROD link*/
+  /*content: url("https://ttectalent.stage.sumtotal.host/Core/6305.sumtfile");*/ /*STAGE link*/
+}
+
+.boxes{
+  display: grid;
+  gap: 2.5em;
+
+}
+
+.boxes_subtitle{
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.boxes_paragraph{
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: large;
+}
+
+.spacetext{
+  margin-top: 10px;
+}
+
+
+.boxes_btns{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content:center;
+  gap: 1em;
+
+  margin-top: 1em;
+  padding: 1em 0;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 8px;
+  background-color: #e7e8e5;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: context-menu;
+}
+
+.btn-Space{
+  margin-top: 40px;
+}
+
+.boxesfont{
+  font-size: medium;
+}
+
+.free{
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+
+/*--------CSS-TABS-BUTTONS---------------------------------------------------*/
+
+/* Style the tab */
+.tab {
+  display: grid;
+  grid-auto-rows: 80px;
+  grid-template-columns: 400px 400px 400px;
+  overflow: hidden;
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.tablinks{
+  width: 100%;
+}
+
+/* .tablinks1{
+  margin-right: 100px;
+  
+} */
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: large;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  border-bottom: 3px solid var(--blue);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom: 3px solid var(--blue);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: block;
+  padding: 6px 12px;
+  border-top: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  margin-top: 40px;
+}
+
+.hero {
+  border: 1px solid var(--white);
+}
+
+.tabOne{
+  display: grid;
+  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 20px;
+}
+
+.tab1{
+  margin-top: 10px;
+  border: var(--blue3) 2px solid;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+  margin-left: 15px;
+  margin-right: 15px;
+
+}
+
+.tab3{
+  margin-top: 10px;
+  padding: 20px 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+}
+
+.tabTwo{
+  display: none;
+}
+
+.contentOne{
+  display: block;
+}
+
+.contentTwo{
+  display: none;
+}
+
+.contentThree{
+  display: none;
+}
+
+.blocked{
+  pointer-events: none;
+  color: var(--silver);
+}
+
+/*---------CARDS-Career-Progression-and-links-----------------------------------------------*/
+
+.container-cards{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+
+  .card{
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 1.5s;
+  }
+
+  .card-6{
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 1.5s;
+  }
+
+  .card::before{
+    content: "";
+    border-radius: 10px 10px 0 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: var(--blue);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card-6::before{
+    content: "";
+    border-radius: 10px 10px 0 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: var(--gray);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card_container{
+    padding: 30px 20px;
+    background: #ffffff;
+    border-radius: 0 0 10px 10px;
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card_container-6{
+    padding: 30px 20px;
+    background: #ffffff;
+    border-radius: 0 0 10px 10px;
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card_name{
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--blue);
+  }
+
+  .card_name-6{
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--silver);
+  }
+
+  .card_name2{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .card_text{
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .card_copy{
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--black);
+  }
+
+  .card_copy:hover{
+    color:#afb0af;
+  }
+
+  .card_copy-6{
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--silver);
+  }
+
+  .card_cta{
+    background: var(--purple2);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+    margin: 5px auto;
+    width: 220px;
+    border-radius: 6px;
+  }
+
+  .blocked{
+    background-color: #e7e8e5;
+    pointer-events: none;
+}
+
+.careerlinks{
+  text-decoration: none;
+  
+}
+
+.spacelink{
+  margin-bottom: 5px;
+  color: var(--blue);
+  text-decoration-line: underline;
+}
+
+.title-link{
+  margin-bottom: 5px;
+  color: var(--blue);
+  text-decoration-line: underline;
+  font-size:large;
+  font-weight: bold;
+  list-style: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.a__links{
+  text-decoration: none;
+}
+
+.text-main{
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/*--------Effects---------------------------------------------------*/
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/*--------Divider---------------------------------------------------*/
+
+/* dashed */
+hr.dashed {
+  border-top: 1px dashed #caccc9;
+  margin-top: 15px;
+  display: none;
+}
+
+/* Solid */
+hr.solid {
+  border-top: 1px solid #caccc9;
+  margin-top: 15px;
+}
+
+/*--------@medias---------------------------------------------------*/
+@media (max-width: 1800px ) {
+  .boxesfont{
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  .iconimg{
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 1100px ){
+  .tab {
+    grid-template-columns: 250px 250px 250px;
+} 
+/* Divider*/
+hr.dashed {
+  display:none;
+  border-top: 1px dashed #caccc9;
+  margin-top: 50px;
+}
+}
+
+@media (max-width: 768px ){
+  
+  /* Divider*/
+hr.dashed {
+  display:block;
+  border-top: 1px dashed #caccc9;
+  margin-top: 50px;
+}
+.tab {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+} 
+}
+
+/*--------CSS Part Ends Here------------*/
+</style>
+
+</head>
+
+<!--------HTML----------------------------------------------------->
+
+  <body>
+
+<!--------Header Banner--------->
+
+    <header class="front">
+      <div class="front_banner container3">
+
+        <div class="back">
+          <a class="btn_back" href="indexV3-DSG-1.html" target="_top">Home</a>
+        </div>
+
+        <h1 class="front_title">How We Evolve</h1>
+        <p class="front_text">Accelerate your career by following the available career path across various technical and digital specialties and competencies. The different paths will help you expand your abilities in your role or explore new areas. We evolve when we expose ourselves to multiple skilled areas, which will enable you to find new solutions and approaches to your role at TTEC Digital.
+        </p>
+        
+
+      </div>
+
+    </header>
+
+
+  <!--------TABS-BUTTONS----https://www.w3schools.com/howto/howto_js_tabs.asp------>
+
+  <section class="tabs container3">
+
+    <div class="tab">
+      <button class="tablinks active" onclick="openCity(event, 'one')">Career Progression
+      </button>
+      <button class="tablinks Leader" onclick="openCity(event, 'two')">Technical Pathways
+      </button>
+      <button class="tablinks Leader" onclick="openCity(event, 'three')">Career Level Capabilities          
+      </button>
+    </div>
+
+<!--------Divider--------->
+  <div><hr class="dashed"></div>
+
+
+<!--------Content-TABS-------->
+
+  <!--------Tab-1--------->
+
+  <div id="one" class= "tabcontent contentOne">  
+
+    <div class="tabOne"> 
+
+    <div class="tab3">
+      <p class="text-main">At TTEC, we take our employees' career mobility and progression seriously. we are invested in your success and want you to feel supported at any stage of your professional journey.</p>
+
+      <p class="text-main">What does Career Progression look here?</p>
+
+      <p class="text-main">You can progress from one level to another (for example, from Consultant to Senior Consultant) and/ or take on people leadership responsibility and grow based on people manager (for example, from Senior Superior to Manager). You can also explore completely different functions of our business and find yourself in new roles where you can learn different skills(for example, from Technology Consultant Architect).</p>
+      
+      <section class="container-cards cards">
+
+        <div class="card animate__animated animate__zoomIn">   <!-- Card 1 -->
+          <a href="#" target="" class="careerlinks"><div class="card_container">
+              <h2 class="card_name">Career Progression Planning Course</h2>
+              <div class="card_text">
+                <p class="card_copy">Quisque luctus ligula sapien, eu volutpat nisi mollis non. Nullam sit amet lectus eget orci maximus volutpat. Integer fringilla nisl sed molestie maximus</p>
+              </div>
+            </div></a>
+          </div>
+      
+          <div class="card animate__animated animate__zoomIn">  <!-- Card 2 -->
+            <a href="#" target="" class="careerlinks"><div class="card_container">
+              <h2 class="card_name">Global Career Architecture Course</h2>
+              <div class="card_text">
+                <p class="card_copy">Quisque luctus ligula sapien, eu volutpat nisi mollis non. Nullam sit amet lectus eget orci maximus volutpat. Integer fringilla nisl sed molestie maximus</p>
+              </div>
+            </div></a>
+          </div>
+      
+          <div class="card animate__animated animate__zoomIn">  <!-- Card 3 -->
+            <a href="#" target="" class="careerlinks"><div class="card_container">
+              <h2 class="card_name">Career Leveling Guides</h2>
+              <div class="card_text">
+                <p class="card_copy">Quisque luctus ligula sapien, eu volutpat nisi mollis non. Nullam sit amet lectus eget orci maximus volutpat. Integer fringilla nisl sed molestie maximus</p>
+              </div>
+            </div></a>
+          </div>
+      
+          <div class="card animate__animated animate__zoomIn">  <!-- Card 4 -->
+            <a href="StepDSG-3-3th.html" target="_top" class="careerlinks"><div class="card_container">
+              <h2 class="card_name">Technical Pathways</h2>
+              <div class="card_text">
+                <p class="card_copy">Quisque luctus ligula sapien, eu volutpat nisi mollis non.</p>
+              </div>
+            </div></a>
+          </div>
+
+          <div class="card animate__animated animate__zoomIn">  <!-- Card 5 -->
+            <div class="card_container">
+              <h2 class="card_name">Core Competencies</h2>
+              <div class="card_text">
+                <p class="card_copy">
+                  <ul>
+                    <a href="#" class="a__links" target=""><li class="spacelink">New name</li></a>
+                    <a href="#" class="a__links" target=""><li class="spacelink">Professional Competencies</li></a>
+                    <a href="https://ttectalent.sumtotal.host/core/pillarRedirect?relyingParty=LM&url=app%2Fmanagement%2FLMS_ActDetails.aspx%3FActivityId%3D219305%26UserMode%3D0" class="a__links"  target="_blank"><li class="spacelink">Manager Competencies</li></a>
+                    <a href="https://ttectalent.sumtotal.host/core/pillarRedirect?relyingParty=LM&url=app%2Fmanagement%2FLMS_ActDetails.aspx%3FActivityId%3D219306%26UserMode%3D0" class="a__links"  target="_blank"><li class="spacelink">Executive Competencies</li></a>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card animate__animated animate__zoomIn">  <!-- Card 6 -->
+            <a href="#" target="" class="careerlinks"><div class="card_container">
+              <h2 class="card_name">Digital Titles Summary</h2>
+              <div class="card_text">
+                <p class="card_copy">Quisque luctus ligula sapien, eu volutpat nisi mollis non.</p>
+              </div>
+            </div></a>
+          </div>
+
+          <div class="card animate__animated animate__zoomIn">  <!-- Card 7 -->
+            <div class="card_container">
+              <a href="#" target=""><h2 class="title-link">Promotion Cycles Overview</h2></a>
+              <a href="#" target=""><h2 class="title-link">Goal Setting and Performance Management</h2></a>
+              </div>
+            </div>
+
+          </div>
+
+    </div>
+  </div>
+  </div>
+    
+  <!--------Tab-2--------->
+
+<div id="two" class= "tabcontent contentTwo">
+
+  <div class="tabOne">
+
+    <div class="tab1">
+      <h3 class="boxes_subtitle">Digital Partners</h3>
+      <p class="boxes_paragraph">Suspendisse fermentum, metus nec dapibus gravida, velit sapien eleifend sapien, id molestie ipsum leo eu sem. In blandit libero eros, eget vehicula lectus pharetra nec. Curabitur maximus risus at accumsan fringilla. Mauris nisi elit, ornare quis ullamcorper a, mollis et elit. 
+      </p>
+
+      <a href="StepDSG-5.html" class="boxes_btns free" target="_top"><img src="./imgs/Icon2DSG-2.png" alt="IconDSG-1.png">Microsoft</a>
+      <a href="#" class="boxes_btns boxesfont free" target="_top"><img src="./imgs/Icon2DSG-2.png" class="iconimg" alt="IconDSG-2.png">Amazon Web Services</a>
+      <a href="#" class="boxes_btns" target="_top"><img src="./imgs/Icon2DSG-2.png" alt="IconDSG-3.png">Cisco</a>
+      <a href="#" class="boxes_btns free" target="_top"><img src="./imgs/Icon2DSG-2.png" alt="IconDSG-4.png">Genesys</a>
+      <a href="#" class="boxes_btns free" target="_top"><img src="./imgs/Icon2DSG-2.png" alt="IconDSG-5.png">Google</a>
+    </div>
+
+    <div class="tab1">
+      <h3 class="boxes_subtitle">Digital Practices</h3>
+      <p class="boxes_paragraph">Suspendisse fermentum, metus nec dapibus gravida, velit sapien eleifend sapien, id molestie ipsum leo eu sem. In blandit libero eros, eget vehicula lectus pharetra nec. Curabitur maximus risus at accumsan fringilla. Mauris nisi elit, ornare quis ullamcorper a, mollis et elit.
+      </p>
+
+      <a href="#" class="boxes_btns free" target="_top"><img src="./imgs/Icon2DSG-2.png" alt="IconDSG-6.png">Analytics</a>
+      <a href="#" class="boxes_btns" target="_top"><img src="./imgs/Icon2DSG-2.png" alt="IconDSG-8.png">Consulting</a>
+    </div>
+
+    <div class="tab1">
+      <h3 class="boxes_subtitle">Artificial Intelligence for Customer Experience & Storytelling</h3>
+      <p class="boxes_paragraph">Suspendisse fermentum, metus nec dapibus gravida, velit sapien eleifend sapien, id molestie ipsum leo eu sem. In blandit libero eros, eget vehicula lectus pharetra nec. Curabitur maximus risus at accumsan fringilla. Mauris nisi elit, ornare quis ullamcorper a, mollis et elit. 
+      </p>
+
+      <a href="#" class="boxes_btns free" target="">AI for CX Transformation</a>
+
+      <p class="boxes_paragraph spacetext">For more information about the certification program, the certification badge, and a job aid <a href="#" target=""> <strong>click here</strong></a>.
+      </p>
+
+      <a href="#" class="boxes_btns btn-Space free" target="">Digital Storytelling Guide </a>
+
+      <p class="boxes_paragraph spacetext">For more information about the certification program, the certification badge, and the job aid <a href="#" target=""> <strong>click here</strong></a>.
+      </p>
+
+    </div>
+
+    <div class="tab1">
+      <h3 class="boxes_subtitle">India Innovation Studio</h3>
+      <p class="boxes_paragraph">Suspendisse fermentum, metus nec dapibus gravida, velit sapien eleifend sapien, id molestie ipsum leo eu sem. In blandit libero eros, eget vehicula lectus pharetra nec. Curabitur maximus risus at accumsan fringilla. Mauris nisi elit, ornare quis ullamcorper a, mollis et elit.</p>
+      <a href="#" class="boxes_btns free" target="">Campus to Corporate </a>
+      <a href="#" class="boxes_btns free" target="">India Innovation Studio</a>
+    </div>
+
+  </div>
+
+</div>
+
+<!--------Tab-3--------->
+    
+<div id="three" class="tabcontent hero contentThree">
+
+  <div class="tabOne">
+
+    <div class="tab1">
+      <h3 class="boxes_subtitle">Core Competencies</h3>
+      <p class="boxes_paragraph">Suspendisse fermentum, metus nec dapibus gravida, velit sapien eleifend sapien, id molestie ipsum leo eu sem. In blandit libero eros, eget vehicula lectus pharetra nec. Curabitur maximus risus at accumsan fringilla. Mauris nisi elit, ornare quis ullamcorper a, mollis et elit.
+      </p>
+
+      <a href="#" class="boxes_btns free" target="">TTEC Digital: Professional Competencies</a>
+      <a href="#" class="boxes_btns free" target="">TTEC Digital: Manager Competencies</a>
+      <a href="#" class="boxes_btns free" target="">TTEC Digital: Executive Competencies</a>
+
+    </div>
+
+    <div class="tab1">
+      <h3 class="boxes_subtitle">Functional Competency<br>– Coming Soon!</h3>
+      <p class="boxes_paragraph">Suspendisse fermentum, metus nec dapibus gravida, velit sapien eleifend sapien, id molestie ipsum leo eu sem. In blandit libero eros, eget vehicula lectus pharetra nec. Curabitur maximus risus at accumsan fringilla. Mauris nisi elit, ornare quis ullamcorper a, mollis et elit.
+      </p>
+
+      <a href="#" class="boxes_btns" target="">Consulting</a>
+      <a href="#" class="boxes_btns" target="">Sales</a>
+      <a href="#" class="boxes_btns" target="">Project Management</a>
+    </div>
+
+    <div class="tab1">
+      <h3 class="boxes_subtitle">External Training Resources</h3>
+      <p class="boxes_paragraph">Suspendisse fermentum, metus nec dapibus gravida, velit sapien eleifend sapien, id molestie ipsum leo eu sem. In blandit libero eros, eget vehicula lectus pharetra nec. Curabitur maximus risus at accumsan fringilla. Mauris nisi elit, ornare quis ullamcorper a, mollis et elit.
+      </p>
+
+      <a href="#" class="boxes_btns boxesfont free" target="">Add External Tasks to Your PDP</a>
+    </div>
+
+  </div>
+
+</div> <!------end--Tab-3--------->
+    
+  </section> <!--------------HTML-Ends-Here------------------>
+
+
+
+<!-------Java-Script-Tabs---------------------------------------------------->
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+    }
+    </script>
+
+
+    <p id="contador">0</p>
+
+    <script>
+        // Incrementa el contador al cargar la página
+        var contador = localStorage.getItem('contador') || 0;
+        contador++;
+        localStorage.setItem('contador', contador);
+        
+        // Actualiza el texto del contador en la página
+        document.getElementById('contador').textContent = contador;
+    </script>
+
+
+  </body> 
+  
+</html>
+

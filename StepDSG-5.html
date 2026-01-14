@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>StepDSG-5-Microsoft</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  
+<style> /*------CSS Part-Starts-Here-------------------------*/
+
+:root{
+    --primary: rgb(1, 44, 118);
+    --blue: rgb(35, 107, 244);
+    --blue2: rgb(0, 41, 92);
+    --blue3: rgb(230, 237, 255);
+    --blue4: rgb(158, 191, 250);
+    --purple: rgb(100 82 243);
+    --purple2: rgb(77 59 181);
+    --purple3: rgb(204 196 250);
+    --tourquoise: rgb(92 236 211);
+    --tourquoise2: rgb(18 105 94);
+    --tourquoise3: rgb(163 245 232);
+    --black: rgb(0 0 0);
+    --metal: rgb(43, 58, 56);
+    --silver: rgb(187, 199, 204);
+    --gray: rgb(230, 236, 239);
+    --white-gray: rgb(251, 251, 251);
+    --white: rgb(255, 255, 255);
+    --links: rgb(85, 26, 139);
+}
+
+* {
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Figtree', sans-serif;
+  }
+
+  .container5{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+  .front{
+    display: grid;
+    min-height: 250px;
+    background-image: url("./imgs/bannerDSG-2.png"); /*Local link*/
+    /*background-image: url("https://ttectalent.sumtotal.host/Core/6318.sumtfile");*/ /*PROD link*/
+    /*background-image: url("https://ttectalent.stage.sumtotal.host/Core/6424.sumtfile");*/ /*STAGE link*/
+    background-position: center;
+    background-size: cover;
+    border-bottom: var(--blue) 7px solid; 
+  }
+
+  .front_title{
+    max-width: 1500px;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+
+.front_text{
+    color: var(--white);
+    margin-bottom: -30px;
+    font-size: large;
+}
+
+.back{
+  margin-bottom: 20px;
+}
+
+.btn_back{
+  display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: left;
+    gap: .5em;
+    color: var(--white);
+    
+}
+
+.btn_back::before{
+  content: url("./imgs_V2/backDSG.png"); /*Local link*/
+  /*content: url("https://ttectalent.sumtotal.host/Core/6322.sumtfile");*/ /*PROD link*/
+  /*content: url("https://ttectalent.stage.sumtotal.host/Core/6305.sumtfile");*/ /*Stage link*/
+}
+
+.course1{
+  display: grid;
+  grid-auto-flow: column;
+  width: 90%;
+  max-width: 1300px;
+  margin: 20px auto;
+  overflow: hidden;
+  outline: 1px solid;
+  height: 200px;
+}
+
+/*--------Drop-dawn Menu1---------*/
+
+.li-menu {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.li-menu:hover {
+  color: #222222;
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.main_drop{
+  padding-top: 10px;
+  justify-self: center;
+  align-self: center;
+  z-index: 1;
+  overflow: visible;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: var(--white);
+  cursor: pointer;
+  white-space: nowrap;
+  width: 318px;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--black);
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 var(--black);
+  background-color: var(--white);
+  list-style-type: none;  
+  box-shadow: 0px 8px 16px 0px var(--black);
+  border-radius: 4px;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+} 
+
+.dd-menu li {
+  padding: 5px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #eeeeee;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+/*--------CSS-TABS-BUTTONS---------------------------------------------------*/
+
+/* Style the tab */
+.tab {
+  display: grid;
+  grid-auto-rows: 80px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  font-size: 1rem;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 25px 16px;
+  transition: 0.3s;
+  font-size: medium;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  border-bottom: 3px solid var(--blue);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom: 3px solid var(--blue);
+}
+
+/* Style the tab content */
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+.tab1{
+  margin-top: 30px;
+}
+
+.contentOne{
+  display: block;
+}
+
+.elemnt1 { grid-area: first; }
+.elemnt2 { grid-area: second; }
+.elemnt3 { grid-area: third; }
+.elemnt4 { grid-area: fourth; }
+.elemnt5 { grid-area: fifth; }
+
+
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+/*--------CONT-TABS-IMAGE--------------------------------------------------*/
+
+.item1 { grid-area: external; }
+.item2 { grid-area: image; }
+.item3 { grid-area: required; }
+.item4 { grid-area: microsoft; }
+.item5 { grid-area: texto; }
+.item6 { grid-area: complete; }
+.item7 { grid-area: comenzar; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'image image image external external required'
+    'image image image microsoft microsoft microsoft'
+    'image image image texto texto texto'
+    'image image image complete complete comenzar';
+    
+  gap: 1px;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+
+.grid-container > div {
+  text-align: left;
+  font-size: 15px;
+}
+
+.text1{
+  text-align: end;
+  color: var(--blue);
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.pinky{
+  text-align: end;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.cont_subtitle{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.cont_title{
+  margin-left: 20px;
+}
+
+a{
+  color: var(--links);
+}
+
+.text2{
+  margin-left: 20px;
+  font-size: large;
+}
+
+/*span.fill{
+  margin-right: 244px;
+}*/
+
+.gallery_img{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  min-height: 250px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.item2{
+  max-width: 300px;
+}
+
+.stickout{
+  color: #1ac637;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.stickout2{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.box-link{
+  color: var(--links);
+}
+
+/*--------TOP Button---------------------------------------------------*/
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--purple3);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: var(--purple3);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+/*--------Divider---------------------------------------------------*/
+
+hr.dashed {
+  border-top: 1px dashed #caccc9;
+  margin-top: 15px;
+}
+
+/*--------@medias---------------------------------------------------*/
+
+@media (min-width: 768px){
+/* Divider*/
+hr.dashed {
+  display: none;
+  border-top: 1px dashed #caccc9;
+  margin-top: 20px;
+}
+}
+
+/*--------CSS Part Ends Here------------*/
+</style>
+
+</head>
+
+<!--------HTML----------------------------------------------------->
+
+  <body>
+
+<!--------Header Banner--------->
+
+<header class="front">
+  <div class="front_banner container5">
+
+    <div class="back">
+      <a class="btn_back" href="StepDSG-3.html" target="_top">How We Evolve</a>
+    </div>
+    
+    <h1 class="front_title">Microsoft</h1>
+    <p class="front_text">Keep pace with today’s technical roles and requirements to help you advance your career as a Microsoft consultant. Depending on your career aspirations, select the appropriate path to complete the certification directly from the Microsoft Certifications page.
+    </p>
+
+  </div>
+
+  <!--------Drop-dawn Menu1------https://codepen.io/raneio/pen/NbbZEM--->
+
+  <div class="main_drop container5">
+  <label class="dropdown">
+
+    <div class="dd-button">
+      Digital Partners: Microsoft
+    </div>
+  
+    <input type="checkbox" class="dd-input" id="test">
+  
+    <ul class="dd-menu">
+      <li><a href="#" target="_top" class="li-menu"> Digital Partners: Amazon Web Service</a></li>
+      <li><a href="#" target="_top" class="li-menu"> Digital Partners: Genesys</a></li>
+      <li><a href="#" target="_top" class="li-menu"> Digital Partnerss: Google</a></li>
+      <li><a href="#" target="_top" class="li-menu"> Digital Practices: Analytics</a></li>
+      <li><a href="#" target="_top" class="li-menu"> Indian Innovation Studio</a></li>
+    </ul>
+
+  </label>
+</div>
+
+</header>
+
+
+<!--------CSS-TABS-BUTTONS----https://www.w3schools.com/howto/howto_js_tabs.asp----->
+
+<section class="tabs container5">
+
+
+<div class="tab">
+  <button class="tablinks element1 active" onclick="openCity(event, 'one')">Aspiring Microsoft<br>Associate Engineer
+  </button>
+  <button class="tablinks element2" onclick="openCity(event, 'two')">Microsoft Associate<br>Consultant/Analyst/Developer
+    </button>
+  <button class="tablinks element3" onclick="openCity(event, 'Three')">Microsoft Consultant/Analyst/Developer
+    </button>
+  <button class="tablinks element4" onclick="openCity(event, 'four')">Microsoft Senior Consultant/Analyst/Developer   
+    </button>
+  <button class="tablinks element5" onclick="openCity(event, 'five')">Microsoft Principal<br>Consultant/Architect
+    </button>
+  
+</div>
+
+<!--------Divider--------->
+<div><hr class="dashed"></div>
+
+<!--------CONT-TABS-IMAGE--------->
+
+<div id="one" class="tabcontent contentOne">    <!--------ONE--------->    <!------https://www.w3schools.com/css/css_grid.asp---->
+  
+  <div class="grid-container tab1">  <!----1---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 6hr 33min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-1.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout2">REQUIRED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform Fundamentals
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to describe the business value of the Microsoft Power Platform, identify the foundational components of the Microsoft Power Platform, demonstrate the capabilities of Power BI, Power Apps, and Power Automate, and demonstrate complementary Microsoft Power Platform solutions.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">  <!----2---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 7hr 31min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-2.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Fundamentals (CRM)
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to describe Microsoft Dynamics 365 Marketing, Microsoft Dynamics 365 Sales, Microsoft Dynamics 365 Customer Service, and Microsoft Dynamics 365 Field Service, as well as your knowledge of the core capabilities of Microsoft Dynamics 365 customer engagement apps.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">  <!----3---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 7hr 56min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-3.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Fundamentals (ERP)
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to describe Dynamics 365 Supply Chain Management, Dynamics 365 Finance, Dynamics 365 Commerce, Dynamics 365 Human Resources, Project Operations, and shared features.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+</div>
+
+<div id="two" class="tabcontent">     <!--------TWO--------->
+
+  <div class="grid-container tab1">  <!----4---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 57hr 51min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-4.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout2">REQUIRED</span></p></div> 
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to configure Microsoft Dataverse, create apps by using Microsoft Power Apps, create and manage process automation, describe Power Virtual Agents, import and visualize data by using dataflows and Power BI, and define an environment strategy.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">  <!----5---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 39hr 46min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-5.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Customer Service Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to manage cases, knowledge management, entitlements, scheduling, multi-session experiences, analytics and insights, and implement Microsoft Power Platform, Connected Customer Service, and routing.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----6---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 32hr 42min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-6.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform Developer Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to create a technical design, configure Microsoft Dataverse, create and configure Power Apps, configure business process automation, extend the user experience, extend the platform, and develop integrations.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+
+  <div class="grid-container tab1">   <!----7---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 12hr 2min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-7.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform App Maker Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to design, analyze, visualize, and create business solutions.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----8---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 10hr 52min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-8.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Sales Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to configure Dynamics 365 Sales, manage core sales tables, and configure additional tools and services.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+</div>
+
+<div id="Three" class="tabcontent">    <!--------THREE--------->
+
+  <div class="grid-container tab1">   <!----9---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 57hr 51min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-9.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout2">REQUIRED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to configure Microsoft Dataverse, create apps, manage process automation, describe Power Virtual Agents, import and visualize data, and define an environment strategy.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----10---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 19hr 3min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-10.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Field Service Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to configure field service applications, manage work orders, schedule and dispatch work orders, manage Dynamics 365 Field Service mobile app, manage inventory and purchasing, manage Connected Field Service and customer assets, implement Microsoft Power Platform, and manage customer experiences.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----11---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 19hr 30min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-11.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Marketing Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to configure marketing applications, manage segments and lists, create and manage forms and pages, manage leads, contacts, and accounts, create and manage email messages, manage customer journeys, manage events and webinars, and configure Dynamics 365 Customer Voice.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----12---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 17hr 48min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-12.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power BI Data Analyst Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to prepare data, model it, visualize and analyze it, and deploy and maintain assets.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+</div>
+
+<div id="four" class="tabcontent">    <!--------FOUR--------->
+
+  <div class="grid-container tab1">   <!----13---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 57hr 51min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-13.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout2">REQUIRED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to configure Microsoft Dataverse, create apps, manage process automation, describe Power Virtual Agents, import and visualize data, and define an environment strategy.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----14---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 39hr 46min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-14.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Customer Service Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to manage cases, knowledge management, entitlements, scheduling, multi-session experiences, analytics and insights, and implement Microsoft Power Platform, Connected Customer Service, and routing.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----15---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 32hr 42min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-15.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform Developer Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to create a technical design, configure Microsoft Dataverse, create and configure Power Apps, configure business process automation, extend the user experience, extend the platform, and develop integrations.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----16---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 12hr 2min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-16.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform App Maker Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to design, analyze, visualize, and create business solutions.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="https://learn.microsoft.com/en-us/certifications/power-platform-app-maker/" target="_blank"><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">    <!----17---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 10hr 52min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-17.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Sales Functional Consultant Associate
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to configure Dynamics 365 Sales, manage core sales tables, and configure additional tools and services.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+  <div class="grid-container tab1">   <!----18---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 12hr 14min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-18.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform Solution Architect Expert
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to accomplish the following technical tasks: perform solution envisioning and requirement analyses; architect a solution; and implement the solution.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+  
+
+</div>
+
+<div id="five" class="tabcontent">    <!--------FIVE--------->
+
+  <div class="grid-container tab1">    <!----19---->
+    <div class="item1"><h3 class="cont_subtitle">DURATION | 12hr 14min</h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-19.png"></div>
+    <div class="item3"><p class="text1 pinky"><span class="stickout2">REQUIRED</span></p></div>  
+    <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Platform Solution Architect Expert
+    </a></h2></div>
+    <div class="item5"><p class="text2">This exam measures your ability to accomplish the following technical tasks: perform solution envisioning and requirement analyses; architect a solution; and implement the solution.
+    </p></div>
+    <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+  </div>
+
+
+<div class="grid-container tab1">    <!----20---->
+  <div class="item1"><h3 class="cont_subtitle">DURATION | 19hr 3min</h3></div>
+  <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-20.png"></div>
+  <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+  <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Field Service Functional Consultant Associate
+  </a></h2></div>
+  <div class="item5"><p class="text2">This exam measures your ability to configure field service applications, manage work orders, schedule and dispatch work orders, manage Dynamics 365 Field Service mobile app, manage inventory and purchasing, manage Connected Field Service and customer assets, implement Microsoft Power Platform, and manage customer experiences.
+  </p></div>
+  <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+</div>
+
+<div class="grid-container tab1">   <!----21---->
+  <div class="item1"><h3 class="cont_subtitle">DURATION | 19hr 30min</h3></div>
+  <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-21.png"></div>
+  <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+  <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Dynamics 365 Marketing Functional Consultant Associate
+  </a></h2></div>
+  <div class="item5"><p class="text2">This exam measures your ability to configure marketing applications, manage segments and lists, create and manage forms and pages, manage leads, contacts, and accounts, create and manage email messages, manage customer journeys, manage events and webinars, and configure Dynamics 365 Customer Voice.
+  </p></div>
+  <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+</div>
+
+<div class="grid-container tab1">   <!----22---->
+  <div class="item1"><h3 class="cont_subtitle">DURATION | 17hr 48min</h3></div>
+  <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-22.png"></div>
+  <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+  <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power BI Data Analyst Associate
+  </a></h2></div>
+  <div class="item5"><p class="text2">This exam measures your ability to prepare data, model it, visualize and analyze it, and deploy and maintain assets.
+  </p></div>
+  <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+</div>
+
+<div class="grid-container tab1">   <!----23---->
+  <div class="item1"><h3 class="cont_subtitle">DURATION | 18hr 14min</h3></div>
+  <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-23.png"></div>
+  <div class="item3"><p class="text1 pinky"><span class="stickout">RECOMMENDED</span></p></div>  
+  <div class="item4"><h2 class="cont_title"><a href="#" target="">Microsoft Certified: Power Automate RPA Developer Associate
+  </a></h2></div>
+  <div class="item5"><p class="text2"><span class="fill"> This exam measures your ability to design, develop, deploy, and manage solutions.</span>
+  </p></div>
+  <div class="item7"><p class="pinky"><a href="#" target=""><span class="box-link">Get Started</span></a></p></div>
+</div>
+
+</div>
+
+</section> 
+
+<!--------Back to the Top Button-------->
+
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<!-- Test the scroll -->
+<div style="height:50px;">
+
+
+<!--------------HTML-Ends-Here------------------>
+
+
+
+
+<!-------Java-Script-Tabs------->
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+<!-------Java-Top Button-------->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                <script>
+                // ===== Scroll to Top ==== 
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(200);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 800);
+            });
+                </script>
+
+<!-------Java-Script-Counter-5--------------------------------------------------->
+
+<p id="counter5">0</p>
+
+    <script>
+        // Incrementa el contador al cargar la página
+        var contador = localStorage.getItem('counter5') || 0;
+        contador++;
+        localStorage.setItem('counter5', contador);
+        
+        // Actualiza el texto del contador en la página
+        document.getElementById('counter5').textContent = contador;
+    </script>
+
+
+  </body> 
+  
+</html>
+

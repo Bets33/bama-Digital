@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>DSG - Home-1</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+        
+  
+<style> /*------CSS Part-Starts-Here----------------------*/
+
+:root{
+    --primary: rgb(1, 44, 118);
+    --blue: rgb(35, 107, 244);
+    --blue2: rgb(0, 41, 92);
+    --blue3: rgb(230, 237, 255);
+    --blue4: rgb(158, 191, 250);
+    --purple: rgb(100 82 243);
+    --purple2: rgb(77 59 181);
+    --purple3: rgb(204 196 250);
+    --tourquoise: rgb(92 236 211);
+    --tourquoise2: rgb(18 105 94);
+    --tourquoise3: rgb(163 245 232);
+    --black: rgb(0 0 0);
+    --metal: rgb(43, 58, 56);
+    --silver: rgb(187, 199, 204);
+    --gray: rgb(230, 236, 239);
+    --white-gray: rgb(251, 251, 251);
+    --white: rgb(255, 255, 255);
+    --links: rgb(85, 26, 139);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Figtree', sans-serif;
+}
+
+/*------BACKGROUND-----------------------------------------------------------------------*/
+.grid{
+      background-image: url("./imgs/bg_main.png"); Local Link
+      background-color: #7cc5ef;
+      /*background-image: url("https://ttectalent.sumtotal.host/Core/6900.sumtfile");*/ /*PROD likn*/
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      overflow: auto;
+  }
+
+/*------MENU-SUPERIOR-----------------------------------------------------------------------*/
+
+.menu-content{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  overflow: hidden;
+}
+  
+.navbar {
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: var(--primary);
+  padding: 14px 30px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: var(--gray);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: var(--primary);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--gray);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*--------Buttons------------*/
+
+.main-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.card-container{
+  justify-self: end;
+  margin-top: 50px;
+}
+
+.card-content{
+  display: flex;
+  align-items: center;
+}
+
+.card-logo1{   /*-------STYLE-LOGO-1-----------*/
+  display: grid;
+  justify-content: center;
+  align-items: end;
+  margin-top: 650px;
+}
+
+.card-logo2{   /*-------STYLE-LOGO-2-----------*/
+  display: grid;
+  justify-content: center;
+  align-items: end;
+  margin-top: 10px;
+  display: none;
+}
+
+.card-link{
+  text-decoration: none;
+}
+
+.card1{
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(80, 213, 191);
+    width: 753px;
+    height: 200px;
+    background-image: url(./imgs_V2/dootsDSG-green.png); /*alt=dootsDSG-green*/
+    /* background-image: url(https://ttectalent.sumtotal.host/Core/6927.sumtfile); PROD-alt=dootsDSG-green */
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    animation-duration: 1s; 
+  }
+
+.card1:hover .showing1{
+    display: block;
+  }
+
+.card2{
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    border-radius: 10px 0 0 10px;
+    background-color: var(--blue);
+    width: 753px;
+    height: 200px;
+    background-image: url(./imgs_V2/dootsDSG-blue.png); /*alt=dootsDSG-blue*/
+    /* background-image: url(https://ttectalent.sumtotal.host/Core/6780.sumtfile); PROD-alt=dootsDSG-blue */
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    animation-duration: 2s;
+  }
+
+.card2:hover .showing2{
+    display: block;
+  }
+
+  .card3{
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    border-radius: 10px 0 0 10px;
+    background-color: var(--purple2);
+    width: 753px;
+    height: 200px;
+    background-image: url(./imgs_V2/dootsDSG-purple.png); /*alt=dootsDSG-purple*/
+    /* background-image: url(https://ttectalent.sumtotal.host/Core/6782.sumtfile); PROD-alt=dootsDSG-purple */
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    animation-duration: 3s;
+  }
+
+.card3:hover .showing3{
+    display: block;
+  }
+
+.card-img{
+  margin-left: 30px;
+}
+
+.card-title{
+  color: var(--white);
+  font-weight: 100;
+  margin-left: 40px;
+  margin-bottom: 90px;
+}
+.card-icon1{
+  margin-left: 500px;
+  width: 15px;
+  margin-bottom: 90px;
+  position: fixed;
+}
+
+.card-icon2{
+  margin-left: 500px;
+  width: 15px;
+  margin-bottom: 90px;
+  position: fixed;
+}
+
+.card-icon3{
+  margin-left: 500px;
+  width: 15px;
+  margin-bottom: 90px;
+  position: fixed;
+}
+
+.showing1{
+  color: var(--white);
+  display:none;
+  list-style-type: circle;
+  position: relative;
+  margin-top: 30px;
+  margin-left:-200px;  
+}
+
+.showing2{
+  color: var(--white);
+  display:none;
+  list-style-type: circle;
+  position: relative;
+  margin-top: 40px;
+  margin-left:-180px;  
+}
+
+.showing3{
+  color: var(--white);
+  display:none;
+  list-style-type: circle;
+  position:relative;
+  margin-top: 30px;
+  margin-left:-160px;  
+}
+
+
+
+/*--------@medias------------*/
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+  .main-content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+  }
+
+  .card-container{
+  justify-self: center;
+}
+
+  .card1{
+    width: 840px;
+    height: 150px;
+  }
+
+  .card2{
+    width: 840px;
+    height: 150px;
+  }
+
+  .card3{
+    width: 840px;
+    height: 150px;
+  }
+
+  .card-img{
+  height: 150px;
+}
+
+.card-logo1{   /*-------STYLE-LOGO-1-----------*/
+  margin-top: 10px;
+}
+
+.card-title{
+  font-size: 1.3rem;
+}
+
+.card-icon1{
+  margin-left: 415px;
+}
+
+.card-icon2{
+  margin-left: 415px;
+}
+
+.card-icon3{
+  margin-left: 415px;
+}
+}
+
+@media (max-width: 768px){
+  .main-content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+  }
+
+  .card-container{
+  justify-self: center;
+}
+
+  .card1{
+    width: 650px;
+    height: 150px;
+  }
+
+  .card2{
+    width: 650px;
+    height: 150px;
+  }
+
+  .card3{
+    width: 650px;
+    height: 150px;
+  }
+  
+}
+
+@media (max-width: 640px){
+  
+  .main-content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+  }
+
+  .card-container{
+  justify-self: center;
+}
+
+  .card1{
+    width: 550px;
+    height: 120px;
+  }
+
+  .card2{
+    width: 550px;
+    height: 120px;
+  }
+
+  .card3{
+    width: 550px;
+    height: 120px;
+  }
+
+  .card-img{
+  height: 120px;
+}
+
+.card-icon1{
+  margin-top: 30px;
+}
+
+.card-icon2{
+  margin-top: 30px;
+}
+
+.card-icon3{
+  margin-top: 30px;
+}
+
+.card-logo1{   /*-------STYLE-LOGO-1-----------*/
+  display: none;
+}
+
+.card-logo2{   /*-------STYLE-LOGO-2-----------*/
+  display: block;
+  margin-left: 60px;
+}
+
+}
+
+/*--------CSS Part Ends Here------------*/
+</style>  
+
+</head>
+
+<!--------------HTML-Starts-Here------------------------------------------>
+
+  <body>
+
+    <section class="grid">
+
+      <!--------------Menu superior------------->
+      
+      <div class="menu-content">
+
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="dropbtn">My Development
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#" target="_blank">My Learning</a>
+              <a href="#" target="_blank">My Development Plan</a>
+              <a href="#" target="_blank">My Transcript</a>
+              <a href="#" target="_blank">My Playlists</a>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">My Performance
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#" target="_blank">Manage My Goals</a>
+              <a href="#" target="_blank">My Performance Review</a>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Team Management
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#" target="_blank">My Team´s Development</a>
+              <a href="#" target="_blank">My Team´s Performance</a>
+            </div>
+          </div> 
+        </div>
+
+      </div>
+      
+  <!--------------Logo image------------->
+
+    <section class="main-content">
+
+      <div>
+    <div class="card-logo1">
+      <img src="./imgs/bama_black.png" alt="LogoDSG-V2">
+    </div>
+
+    <div class="card-logo2">
+      <img src="./imgs/bama_black.png" alt="LogoDSG-V2">
+    </div>
+      </div>
+  <!--------------Menu buttons------------->
+
+    <div class="card-container">
+    <div class="card1 animate__animated animate__bounceInRight">
+      <a href="StepDSG-2.html" class="card-link" target="_top"><div class="card-content">
+        <img src="./imgs/ButtonDSG-2.png" class="card-img" alt="ButtonDSG-1">
+        <h2 class="card-title">How We Show Up</h2>
+        <ol class="showing1 animate__animated animate__fadeInUp">
+          <li>Who We Are</li>
+          <li>What´s Important to Us</li>
+          <li>Where to Start</li>
+          <li>How We Work</li>
+        </ol>
+        <img src="./imgs/chevron_DSG.png" class="card-icon1" alt="Chevron-Arrow">
+      </div></a>
+    </div>
+
+    <div class="card2 animate__animated animate__bounceInRight">
+      <a href="StepDSG-3.html" class="card-link" target="_top"><div class="card-content">
+        <img src="./imgs/ButtonDSG-2.png" class="card-img" alt="ButtonDSG-2">
+        <h2 class="card-title">How We Evolve</h2>
+        <ol class="showing2 animate__animated animate__fadeInUp">
+          <li>Career Progression</li>
+          <li>Technical Pathways</li>
+          <li>Career Level Capabilities</li>
+        </ol>
+        <img src="./imgs/chevron_DSG.png" class="card-icon2" alt="Chevron-Arrow">
+      </div></a>
+    </div>
+
+    <div class="card3 animate__animated animate__bounceInRight">
+      <a href="StepDSG-4.html" class="card-link" target="_top"><div class="card-content">
+        <img src="./imgs/ButtonDSG-2.png" class="card-img" alt="ButtonDSG-3">
+        <h2 class="card-title">How We Lead</h2>
+        <ol class="showing3 animate__animated animate__fadeInUp">
+          <li>People Leader</li>
+          <li>Leader Level Capabilities</li>
+          <li>Women in Leadership</li>
+          <li>Negotiation LCoE</li>
+        </ol>
+        <img src="./imgs/chevron_DSG.png" class="card-icon3" alt="Chevron-Arrow">
+      </div></a>
+      
+    </div>
+
+  </div>
+
+    </section>
+
+
+  </section>
+
+  </body> <!--------------HTML-Ends-Here------------------>
+  
+</html>   
+

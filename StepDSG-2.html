@@ -1,0 +1,1705 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>StepDSG-2-HWSU</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  
+<style> /*------CSS Part-Starts-Here-------------------------*/
+
+:root{
+    --primary: rgb(1, 44, 118);
+    --blue: rgb(35, 107, 244);
+    --blue2: rgb(0, 41, 92);
+    --blue3: rgb(230, 237, 255);
+    --blue4: rgb(158, 191, 250);
+    --purple: rgb(100 82 243);
+    --purple2: rgb(77 59 181);
+    --purple3: rgb(204 196 250);
+    --tourquoise: rgb(92 236 211);
+    --tourquoise2: rgb(18 105 94);
+    --tourquoise3: rgb(163 245 232);
+    --black: rgb(0 0 0);
+    --metal: rgb(43, 58, 56);
+    --silver: rgb(187, 199, 204);
+    --gray: rgb(230, 236, 239);
+    --white-gray: rgb(251, 251, 251);
+    --white: rgb(255, 255, 255);
+    --links: rgb(85, 26, 139);
+}
+
+* {
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Figtree', sans-serif;
+  }
+
+  .container4{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1260px;
+    padding: 60px 0;
+}
+
+/*--------Header-Banner-------------------------------------------------*/
+
+  .front{
+    display: grid;
+    min-height: 320px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./imgs/bannerDSG-2.png"); /*Local Link*/
+    /*background-image: url("https://ttectalent.sumtotal.host/Core/6801.sumtfile");*/ /*PROD Link*/
+    border-bottom: var(--purple2) 7px solid; 
+  }
+
+  .front_title{
+    max-width: 1500px;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+
+.front_text{
+    color: var(--white);
+    margin-bottom: -30px;
+    font-size: large;
+}
+
+.back{
+  margin-bottom: 20px;
+}
+
+.btn_back{
+  display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: left;
+    gap: .5em;
+    color: var(--white);
+    
+}
+
+.btn_back::before{
+  content: url("./imgs_V2/backDSG.png"); /*Local link*/
+  /*content: url("https://ttectalent.sumtotal.host/Core/6322.sumtfile");*/ /*PROD link*/
+}
+
+/*--------CSS-TABS-BUTTONS--------------------------------------------------*/
+
+/* Style the tab */
+.tab {
+  display: grid;
+  grid-auto-rows: 80px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  font-size: 1rem;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 25px 16px;
+  transition: 0.3s;
+  font-size: large;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  border-bottom: 3px solid var(--tourquoise2);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom: 3px solid var(--tourquoise2);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+.tab1{
+  margin-top: 30px;
+}
+
+.contentOne{
+  display: block;
+}
+
+.tab2{
+  margin-top: 10px;
+}
+
+.blocked{
+  color: rgb(171, 173, 174);
+  pointer-events: none;
+}
+
+/*--------STYLE-TABS-BARS-COLLAPSE-------------------------------------------------*/
+
+.collapsible {
+  background-color: var(--tourquoise);
+  color: var(--tourquoise2);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: large;
+  margin-top: 5px;
+}
+
+.active1, .collapsible:hover {
+  background-color: #cfcaca;
+  color: var(--tourquoise2);
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: var(--tourquoise2);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active1:after {  /* ---This code make appear a hyphen after de Tab name---*/
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;  /* ---scroll-behavior-auto--*/
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.content-coll{
+  margin-top: 30px;
+}
+
+.coll-open{
+  display: block;
+}
+
+.main-paragraph{
+  margin: 30px 50px;
+  font-size:large;
+  text-align: left;
+}
+
+.paragraph-space{
+  margin-top: 10px;
+}
+
+/*-------END-STYLE-TABS-BARS-COLLAPSE-------------------------------------------------*/
+
+
+/*--------CONT-TABS-NO-IMAGE---------------------------*/
+
+.item8 { grid-area: tbox-titlet; }
+.item9 { grid-area: tbox-texto; }
+.item11 { grid-area: tbox-net; }
+.item10 { grid-area: tbox-link; }
+
+
+.tbox-container {
+  display: grid;
+  grid-template-areas:
+    'tbox-titlet tbox-titlet tbox-titlet'
+    'tbox-texto tbox-texto tbox-texto'
+    'tbox-net tbox-net tbox-net'
+    'tbox-link tbox-link tbox-link';
+    
+  gap: 1px;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+
+.tbox-container > div {
+  text-align: left;
+  font-size: 15px;
+  margin: 0 50px;
+}
+
+.tbox_title{
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--tourquoise2);
+}
+
+.tbox_title2{
+  margin-left: 20px;
+  margin-top: 10px;
+  color: var(--tourquoise2);
+}
+
+a{
+  color: var(--links);
+}
+
+.text5{
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: large;
+}
+
+.text6{
+  text-align: end;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.text7{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+/*span.fill{
+  margin-right: 244px;
+}*/
+
+
+.tbox-link{
+  color: var(--links);
+  padding-bottom: 50px;
+  font-size: large;
+}
+
+.jump{
+  margin-left: 20px;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: large;
+}
+
+table {
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 100px;
+}
+
+.item11{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: auto;
+}
+
+.elements{
+  display:grid;
+  margin: 25px;
+  justify-content: center;
+}
+
+.elements-2{
+  margin: 25px;
+}
+
+.object{
+  margin-left: 10px;
+}
+
+.element-text{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.ctrText{
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
+
+.ctrText-2{
+  margin-left: -55px;
+}
+
+.element-img{
+  margin-left: 15px;
+  width: 100px;
+}
+
+.element-img2{
+  margin-left: 10px;
+  width: 60px;
+}
+
+.element-img3{
+  margin-left: 40px;
+  width: 100px;
+}
+
+.element-img4{
+  margin-left: 30px;
+}
+
+.element-img5{
+  margin-left: 10px;
+}
+
+  
+td{
+  padding: 0 50px;
+}
+
+.num{
+  font-weight: bold;
+  font-size: large;
+  margin-left: 30px;
+}
+
+.num2{
+  font-size: large;
+}
+
+.table-space{
+  padding-bottom: 10px;
+}
+
+.interlist{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  font-size: large;
+}
+
+.description{
+  margin-top: 15px;
+}
+
+.item8{
+  margin-bottom: 30px;
+}
+
+/*-----FIN-CONT-TABS-NO-IMAGE---------------------------*/
+
+
+/*--------CONT-TABS-BOX-IMAGE-------------------------------------------------*/
+
+.item1 { grid-area: duration; }
+.item2 { grid-area: image; }
+.item3 { grid-area: required; }
+.item4 { grid-area: title; }
+.item5 { grid-area: texto; }
+.item6 { grid-area: complete; }
+.item7 { grid-area: launch; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'image image image duration duration required'
+    'image image image title title title'
+    'image image image texto texto texto'
+    'image image image complete complete launch';
+    
+  gap: 1px;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+
+.grid-container > div {
+  text-align: left;
+  font-size: 15px;
+}
+
+.text1{
+  text-align: end;
+  color: var(--blue);
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.pink{
+  text-align: end;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.pink2{
+  text-align: end;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.cont_subtitle{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.cont_title1{
+  margin-left: 20px;
+}
+
+.cont_title2{
+  margin-left: 20px;
+  color: var(--tourquoise2);
+}
+
+a{
+  color: var(--links);
+}
+
+.text2{
+  margin-left: 20px;
+  font-size: large;
+}
+
+/*span.fill{
+  margin-right: 244px;
+}*/
+
+.gallery_img{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  min-height: 250px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.item2{
+  max-width: 300px;
+}
+
+.stickout{
+  color: #1ac637;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.stickout2{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.box-link{
+  color: var(--links);
+}
+
+.extraText{
+  font-size: large;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/*-----END-CONT-TABS-IMAGE---------------------------*/
+
+
+/*--------TABLE-INSIDE-TEXT-BOXES--------------------*/
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tbox-row, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.tbox-table:nth-child(even) {
+  background-color: #e9e7e7;
+}
+
+.main-table{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.title-row{
+  font-weight: bold; 
+}
+
+.tbox-space{
+  line-height: 1.5em;
+}
+
+.tbox-space2{
+  margin-bottom: 15px;
+}
+
+.tbox-space3{
+  margin-top: 10px;
+}
+
+.tbox-space4{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.text-row{
+  margin: 10px 0;
+  font-size: medium;
+}
+
+.row-color1{
+  background-color: #f1f1f1;
+}
+
+.row-color2{
+  background-color: #e9e7e7;
+}
+
+.tbox-link2{
+  color: var(--links);
+  font-size: medium;
+}
+
+.letterBold{
+  font-weight: bold;
+}
+
+/*--------Hover--Boxes--------------------------------------------------*/
+
+.container4X{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1310px;
+    overflow: hidden;
+}
+
+.imgbox{
+  display: flex ;
+  flex-direction: row;
+  justify-content:  space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+div#WS-imagen1 {
+  width: 350px;
+  height: 300px;
+  background-size: cover;
+  background-image: url("./imgs_V2/imgDSG-54.png"); /*Local link */
+  /*background-image: url("https://ttectalent.sumtotal.host/Core/7034.sumtfile"); /*PROD link*/
+  margin: 30px 30px;
+  background-position: center;
+  border-radius: 20px;
+}
+
+div#WS-imagen2 {
+  width: 350px;
+  height: 300px;
+  background-size: cover;
+  background-image: url("./imgs_V2/imgDSG-79.png"); /*Local link */
+  /*background-image: url("https://ttectalent.sumtotal.host/Core/7109.sumtfile"); /*PROD link*/
+  margin: 30px 30px;
+  background-position: center;
+  border-radius: 20px;
+}
+
+div#WS-imagen3 {
+  width: 350px;
+  height: 300px;
+  background-size: cover;
+  background-image: url("./imgs_V2/imgDSG-80.png"); /*Local link */
+  /*background-image: url("https://ttectalent.sumtotal.host/Core/7110.sumtfile"); /*PROD link*/
+  margin: 30px 30px;
+  background-position: center;
+  border-radius: 20px;
+}
+
+div#WS-imagen4 {
+  width: 350px;
+  height: 300px;
+  background-size: cover;
+  background-image: url("./imgs_V2/imgDSG-117.png"); /*Local link */
+  /*background-image: url("https://ttectalent.sumtotal.host/Core/8351.sumtfile"); /*PROD link*/
+  margin: 30px 30px;
+  background-position: center;
+  border-radius: 20px;
+}
+
+div#WS-imagen5 {
+  width: 350px;
+  height: 300px;
+  background-size: cover;
+  background-image: url("./imgs_V2/imgDSG-118.png"); /*Local link */
+  /*background-image: url("https://ttectalent.sumtotal.host/Core/8352.sumtfile"); /*PROD link*/
+  margin: 30px 30px;
+  background-position: center;
+  border-radius: 20px;
+}
+
+div#WS-imagen6 {
+  width: 350px;
+  height: 300px;
+  background-size: cover;
+  background-image: url("./imgs_V2/imgDSG-119.png"); /*Local link */
+  /*background-image: url("https://ttectalent.sumtotal.host/Core/8353.sumtfile"); /*PROD link*/
+  margin: 30px 30px;
+  background-position: center;
+  border-radius: 20px;
+}
+
+div#WS-info {
+  position:absolute;
+  overflow:hidden;
+  width: 350px;
+  height: 300px;
+  background-color: var(--blue);
+  opacity:0;
+  transition: opacity 0.3s;
+}
+
+div#WS-imagen1:hover div#WS-info {
+  opacity:0.8;
+  border-radius: 20px;
+}
+
+div#WS-imagen2:hover div#WS-info {
+  opacity:0.8;
+  border-radius: 20px;
+}
+
+div#WS-imagen3:hover div#WS-info {
+  opacity:0.8;
+  border-radius: 20px;
+}
+
+div#WS-imagen4:hover div#WS-info {
+  opacity:0.8;
+  border-radius: 20px;
+}
+
+div#WS-imagen5:hover div#WS-info {
+  opacity:0.8;
+  border-radius: 20px;
+}
+
+div#WS-imagen6:hover div#WS-info {
+  opacity:0.8;
+  border-radius: 20px;
+}
+
+p#WS-headline {
+  position: absolute;
+  font-size: 1.5rem;
+  transition: margin-left 0.3s;
+  color: #ffffff;
+}
+
+div#WS-imagen1:hover p#WS-headline {
+  margin-left: 50px;
+  margin-top: 90px;
+}
+
+div#WS-imagen2:hover p#WS-headline {
+  margin-left: 50px;
+  margin-top: 90px;
+}
+
+div#WS-imagen3:hover p#WS-headline {
+  margin-left: 50px;
+  margin-top: 90px;
+}
+
+div#WS-imagen4:hover p#WS-headline {
+  margin-left: 50px;
+  margin-top: 90px;
+}
+
+div#WS-imagen5:hover p#WS-headline {
+  margin-left: 50px;
+  margin-top: 90px;
+}
+
+div#WS-imagen6:hover p#WS-headline {
+  margin-left: 50px;
+  margin-top: 90px;
+}
+
+p#WS-descripcion {
+  font-size: 1rem;
+  text-align: center;
+  margin: 50px 20px;
+  transition: margin-top 0.4s;
+  color: #ffffff;
+}
+
+div#WS-imagen1:hover p#WS-descripcion {
+  margin-top: 110px;
+}
+
+div#WS-imagen2:hover p#WS-descripcion {
+  margin-top: 110px;
+}
+
+div#WS-imagen3:hover p#WS-descripcion {
+  margin-top: 110px;
+}
+
+div#WS-imagen4:hover p#WS-descripcion {
+  margin-top: 110px;
+}
+
+div#WS-imagen5:hover p#WS-descripcion {
+  margin-top: 110px;
+}
+
+div#WS-imagen6:hover p#WS-descripcion {
+  margin-top: 110px;
+}
+
+#WS-arrow{
+  transition: margin-left 0.3s;
+  margin-left: 150px;
+  margin-top: 60px;
+}
+
+/*--------TOP Button---------------------------------------------------*/
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--blue4);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: var(--blue4);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+
+/*--------EFFECTS--------------------------------------------------*/
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/*--------Divider---------------------------------------------------*/
+
+/* dashed */
+hr.dashed {
+  border-top: 1px dashed #caccc9;
+  margin-top: 15px;
+}
+
+/* Solid */
+hr.solid {
+  border-top: 1px solid #caccc9;
+  margin-top: 15px;
+}
+
+/*--------@medias---------------------------------------------------*/
+
+@media (min-width: 768px ){
+  
+  /* Divider*/
+hr.dashed {
+  display: none;
+  border-top: 1px dashed #caccc9;
+  margin-top: 20px;
+}
+
+}
+
+@media (max-width: 720px ){
+
+.ctrText{
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}  
+.ctrText-2{
+  margin-right: -20px;
+  margin-bottom: 10px;
+  
+}
+.element-img6 {
+  margin-left: 40px;
+  width: 100px;
+    
+}
+  
+}
+
+/*--------CSS Part Ends Here------------*/
+</style>
+
+</head>
+
+<!--------HTML----------------------------------------------------->
+
+  <body>
+
+<!--------Header Banner--------->
+
+<header class="front">
+  <div class="front_banner container4">
+
+    <div class="back">
+      <a class="btn_back" href="indexV3-DSG-1.html" target="_top">Home</a>
+    </div>
+    
+    <h1 class="front_title">How We Show Up</h1>
+    <p class="front_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim mollis nibh nec porta. Vestibulum vel nisi tristique, iaculis nisl vel, tincidunt orci. Morbi eu augue hendrerit, porttitor elit vitae, aliquam tellus. Morbi non ligula ligula. Praesent eleifend sagittis neque ut viverra. Proin eu dui tincidunt, aliquam tortor ac, laoreet augue. 
+    </p>
+
+  </div>
+
+</header>
+
+
+<section class="tabs container4">
+
+<!--------Tabs-Buttons---https://www.w3schools.com/howto/howto_js_tabs.asp----->  
+
+
+<div class="tab">
+  <button class="tablinks active" onclick="openCity(event, 'one')">Who We Are</button>
+  <button class="tablinks" onclick="openCity(event, 'two')">What’s Important to Us</button>
+  <button class="tablinks" onclick="openCity(event, 'three')">Where to Start</button>
+  <button class="tablinks" onclick="openCity(event, 'four')">How We Work</button>
+</div>
+
+<!--------Divider--------->
+<div><hr class="dashed"></div>
+
+<!--------Content-TABS-NO-IMAGE------->
+
+<div id="one" class="tabcontent contentOne">    <!--------Tabs-1-------->
+
+  <div class="main-paragraph"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim mollis nibh nec porta. Vestibulum vel nisi tristique, iaculis nisl vel, tincidunt orci. Morbi eu augue hendrerit, porttitor elit vitae, aliquam tellus. Morbi non ligula ligula. Praesent eleifend sagittis neque ut viverra. Proin eu dui tincidunt, aliquam tortor ac, laoreet augue. </p></div>
+
+  <div class="content-coll">   <!--------Collapse-----https://www.w3schools.com/howto/howto_js_collapsible.asp---->
+    
+    <button class="collapsible">About Us 1.1</button> <!--------Collapse-1.1-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title">We Deliver Empathy to the Customer Experience</h2></div>
+    <div class="item9"><p class="text5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim mollis nibh nec porta. Vestibulum vel nisi tristique, iaculis nisl vel, tincidunt orci. Morbi eu augue hendrerit, porttitor elit vitae, aliquam tellus. Morbi non ligula ligula. Praesent eleifend sagittis neque ut viverra. Proin eu dui tincidunt, aliquam tortor ac, laoreet augue. Maecenas at volutpat neque, et placerat diam. Fusce et ligula id mauris vestibulum bibendum sed vel neque.</a>
+    </p></div>
+    <div class="item10"></div>
+  </div>
+</div> <!------End--Collapse-1.1-------->
+
+<button class="collapsible">Our History 1.2</button>  <!--------Collapse-1.2-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title">At TTEC Digital</h2></div>
+    <div class="item9"><p class="text5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim mollis nibh nec porta. Vestibulum vel nisi tristique, iaculis nisl vel, tincidunt orci. Morbi eu augue hendrerit, porttitor elit vitae, aliquam tellus. Morbi non ligula ligula. Praesent eleifend sagittis neque ut viverra. Proin eu dui tincidunt, aliquam tortor ac, laoreet augue. Maecenas at volutpat neque, et placerat diam. Fusce et ligula id mauris vestibulum bibendum sed vel neque.</p>
+  </div>
+  <div class="item11">
+    <div class="elements">  <!---element-1---->
+      <p class="num">1,500+</p>
+      <p class="num2">Clients Served</p>
+    </div>
+    <div class="elements">  <!---element-2---->
+      <p class="num">1,500+</p>
+      <p class="num2">Clients Served</p>
+    </div>
+    <div class="elements">  <!---element-3---->
+      <p class="num">1,500+</p>
+      <p class="num2">Clients Served</p>
+    </div>
+  </div>
+    <div class="item10"><p class="text6"><a href="#" target=""><span class="tbox-link">Watch this short video to learn more.</span></a></p></div>
+  </div>
+</div> <!------End--Collapse-1.2-------->
+
+<button class="collapsible">Our Brand 1.3</button>  <!--------Collapse-1.3-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title">Help Us Create Exceptional Customer Experiences</h2></div>
+    <div class="item9"><p class="text5">Fusce fermentum, lorem ac elementum eleifend, nisl tellus pulvinar diam, eu mollis quam libero eget velit. Quisque malesuada quam dapibus, convallis justo ac, tempor nisl. Sed id ipsum ac massa egestas viverra. Nulla congue semper turpis, et finibus enim egestas ac. Fusce eleifend, turpis in vehicula tempor, ante justo pulvinar eros, in feugiat sem libero ac purus. Quisque porta neque nibh, dignissim vulputate magna accumsan ac. </p>
+      <div class="item10"><p class="text6"><a href="#" target=""><span class="tbox-link">Explore our storytelling guide.</span></a></p></div>
+
+      <div class="item10"><p class="text6"><a href="#" target=""><span class="tbox-link">Explore our brand resources.</span></a></p></div>
+
+      <div class="item10"><p class="text6"><a href="#" target=""><span class="tbox-link">Learn about CX Nexus Brand Resources.</span></a></p></div>
+
+      <div class="item8"><h2 class="tbox_title2">Featured Solutions</h2></div>
+
+      <p class="text7">Fusce fermentum, lorem ac elementum eleifend, nisl tellus pulvinar diam, eu mollis quam libero eget velit. Quisque malesuada quam dapibus, convallis justo ac, tempor nisl. Sed id ipsum ac massa egestas viverra. Nulla congue semper turpis, et finibus enim egestas ac. Fusce eleifend, turpis in vehicula tempor, ante justo pulvinar eros, in feugiat sem libero ac purus. Quisque porta neque nibh, dignissim vulputate magna accumsan ac. </p>
+      <div class="item10"><p class="text6"><a href="#" target=""><span class="tbox-link">Explore our Featured Solutions.</span></a></p></div>
+    </div>
+  </div>
+</div> <!------End--Collapse-1.3-------->
+
+<button class="collapsible">Our Operating Model 1.4</button>   <!--------Collapse-1.4-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title"></h2></div>
+    <div class="item9"><p class="text5"><b>TTEC Digital operating model</b> Fusce in efficitur enim, vehicula feugiat nunc. Praesent eget pulvinar orci, in finibus velit. Curabitur feugiat metus ut quam eleifend, sit amet facilisis nisl vehicula. Nulla convallis augue id tincidunt volutpat. Praesent posuere vel ante at molestie. Quisque non vestibulum mauris. Nam dapibus tempus enim vel cursus. 
+    </p></div>
+
+    <div class="item11">
+      <div class="elements">  <!---element-1---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-1">
+        <p class="element-text"><a href="#" target="">TTEC Digital<br>Organization Chart</a></p>
+      </div>
+      <div class="elements">  <!--  element-2 -->
+        <img class="element-img5" src="./imgs/Icon2DSG-6.png" alt="img_icon-2">
+        <p class="element-text"><a href="#" target="">Welcome to 2024</a></p>
+      </div>
+      <!-- <div class="elements">  element-3
+        <img class="element-img4" src="./imgs_V2/img_icon-2.png" alt="img_icon-2">
+        <p class="element-text"><a href="https://cxnexus.sharepoint.com/_layouts/15/stream.aspx?id=%2FDavesDownload%2FDave%27s%20Download%5FOperating%20Model%20%2D%20Deep%20Dive%202%2Emp4" target="_blank">Dave’s Operating Model<br>Deep Drive Part 2</a></p>
+      </div>  -->
+    </div>
+    
+  </div>
+</div> <!------End--Collapse-1.4-------->
+
+
+<button class="collapsible">Strategy 1.5</button>   <!--------Collapse-1.5-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title">We’re Customer Experience Champions</h2></div>
+    <div class="item9"><p class="text5">Fusce in efficitur enim, vehicula feugiat nunc. Praesent eget pulvinar orci, in finibus velit. Curabitur feugiat metus ut quam eleifend, sit amet facilisis nisl vehicula. Nulla convallis.
+    </p></div>
+
+    <div class="item11">
+      <div class="elements">  <!---element-1---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-4">
+        <p class="element-text"><a href="#" target="">The Power of <br> Conversations in<br>CX Transformation</a></p>
+      </div>
+      <div class="elements">  <!---element-2---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-7">
+        <p class="element-text"><a href="#" target="">True North Journey</a></p>
+      </div>
+      <div class="elements">  <!---element-3---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-22">
+        <p class="element-text"><a href="#" target="">Values & Behaviors</a></p>
+      </div>
+      <div class="elements">  <!---element-4---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-5">
+        <p class="element-text"><a href="#" target="">Aligning Unit Goals<br>and Imperatives</a></p>
+      </div>
+      <div class="elements">  <!---element-5---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-6">
+        <p class="element-text"><a href="#" target="">Digital Goals</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>  <!------End--Collapse-1.5-------->
+
+<button class="collapsible">Our Partner Practices 1.6</button>   <!--------Collapse-1.6-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title">Delivering CX Excellence with Best-in-Class Technology Partners</h2></div>
+    <div class="item9"><p class="text5">Fusce in efficitur enim, vehicula feugiat nunc. Praesent eget pulvinar orci, in finibus velit. Curabitur feugiat metus ut quam eleifend, sit amet facilisis nisl vehicula. Nulla convallis.
+    </p></div>
+
+    <div class="item11">
+      <div class="elements">  <!---element-1---->
+        <img class="element-img2" src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-1">
+        <p class="element-text"><a href="#" target="">Microsoft</a></p>
+      </div>
+      <div class="elements">  <!---element-2---->
+        <img class="element-img2" src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-2">
+        <p class="element-text"><a href="#" target="">Amazon Web <br> Services</a></p>
+      </div>
+      <div class="elements">  <!---element-3---->
+        <img class="element-img2" src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-3">
+        <p class="element-text"><a href="#" target="">Genesys</a></p>
+      </div>
+      <div class="elements">  <!---element-4---->
+        <img class="element-img2" src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-4">
+        <p class="element-text"><a href="#" target="">Cisco</a></p>
+      </div>
+      <div class="elements">  <!---element-5---->
+        <img class="element-img2" src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-5">
+        <p class="element-text"><a href="#" target="">Google</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>  <!------End--Collapse-1.6-------->
+
+<button class="collapsible">Our Digital Practices 1.7</button>   <!--------Collapse-1.7-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title">CX Optimized at the Point of Conversation</h2></div>
+    <div class="item9"><p class="text5">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dictum, mauris in maximus vestibulum, erat justo blandit neque, vel laoreet elit turpis condimentum magna. Suspendisse fringilla mattis vestibulum. Nam condimentum lacus a neque consequat scelerisque quis vitae diam. 
+    </p></div>
+    
+    <div class="item11">
+      <div class="elements">  <!---element-1---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-23">
+        <p class="element-text"><a href="#" target="">Consulting</a></p>
+      </div>
+      <div class="elements">  <!---element-2---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-24">
+        <p class="element-text"><a href="#" target="">Managed Services</a></p>
+      </div>
+      <div class="elements">  <!---element-3---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-25">
+        <p class="element-text"><a href="#" target="">IP Innovation</a></p>
+      </div>
+      <div class="elements">  <!---element-4---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-26">
+        <p class="element-text"><a href="#" target="">Analytics</a></p>
+      </div>
+    </div>
+
+  </div>
+</div> <!------End--Collapse-1.7-------->
+
+  </div>
+</div>  <!-----End---Tabs-1-------->
+
+
+<div id="two" class="tabcontent">  <!--------Tabs-2-------->
+
+  <div class="content-coll">   
+    
+    <button class="collapsible">Culture 2.1</button> <!--------Collapse-2.1-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title"></h2></div>
+    <div class="item9"><p class="text5">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dictum, mauris in maximus vestibulum, erat justo blandit neque, vel laoreet elit turpis condimentum magna.
+    </p></div>
+    
+    <div class="item11">
+      <div class="elements">  <!---element-1---->
+        <img class="element-img3 element-img6" src="./imgs/Icon2DSG-6.png" alt="img_icon-21">
+        <p class="element-text ctrText"><a href="#" target="">Career Framework Global<br>Career Architecture Course</a></p>
+        <p class="element-text ctrText-2"><a href="#" target="">Career Framework Global Career<br> Architecture Supporting Documentation</a></p>
+      </div>
+      <div class="elements-2">  <!---element-2---->
+        <img class="element-img3" src="./imgs/Icon2DSG-6.png" alt="img_icon-9">
+        <p class="element-text"><a href="#" target="">Digital Variable<br>Compensation Programs*</a><br>
+        </p>
+      </div>
+      <div class="elements-2">  <!---element-3---->
+        <img class="element-img3" src="./imgs/Icon2DSG-6.png" alt="img_icon-10">
+        <p class="element-text"><a href="#" target="">Diversity, Equity & Inclusion</a></p>
+      </div>
+    </div>
+    <div class="item10"><p class="text5">*Sales employees and Sales support roles are on unique incentive plans 
+    </p></div>
+  </div>
+
+  <!--------Divider--------->
+  <div><hr class="solid"></div>
+  <!------End--Divider--------->
+
+  <div class="tbox-container tab5">  <!----1---->
+    
+    <div class="item11">
+      <div class="elements">  <!---element-4---->
+        <img class="element-img3" src="./imgs/Icon2DSG-6.png" alt="img_icon-16">
+        <p class="element-text"><a href="#" target="">Connecting With Each Other</a></p>
+      </div>
+      <div class="elements">  <!---element-5---->
+        <img class="element-img1" src="./imgs/Icon2DSG-6.png" alt="img_icon-11">
+        <p class="element-text"><a href="#" target="">Accountability</a></p>
+      </div>
+      <div class="elements">  <!---element-6---->
+        <img class="element-img4" src="./imgs/Icon2DSG-6.png" alt="img_icon-8">
+        <p class="element-text"><a href="#" target="">Psychological Safety</a></p>
+      </div>
+    </div>
+
+  </div>
+</div> <!------End--Collapse-2.1-------->
+
+<button class="collapsible">Community 2.2</button>  <!--------Collapse-2.2-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title"></h2></div>
+    <div class="item9"><p class="text5">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dictum, mauris in maximus vestibulum.
+    </p></div>
+    <div class="item11">
+      <div class="elements">  <!---element-1---->
+        <img class="element-img4" src="./imgs/Icon2DSG-6.png" alt="img_icon-20">
+        <p class="element-text"><a href="#" target="">Environmental, Social,<br>and Governance</a></p>
+      </div>
+      <div class="elements">  <!---element-2---->
+        <img class="element-img3" src="./imgs/Icon2DSG-6.png" alt="img_icon-12">
+        <p class="element-text"><a href="#" target="">Employee Resource Groups</a></p>
+      </div>
+      <div class="elements">  <!---element-3---->
+        <img class="element-img5" src="./imgs/Icon2DSG-6.png" alt="img_icon-17">
+        <p class="element-text"><a href="#" target="">TTEC Foundation</a></p>
+      </div>
+    </div>
+  </div>
+</div> <!------End--Collapse-2.2-------->
+
+<button class="collapsible">Safe Workplace 2.3</button>  <!--------Collapse-2.3-------->
+<div class="content">
+  <div class="tbox-container tab5">  <!----1---->
+    <div class="item8"><h2 class="tbox_title"></h2></div>
+    <div class="item9"><p class="text5">In in libero commodo, commodo neque eget, vestibulum augue. Sed lobortis, eros in euismod blandit, magna sapien sodales lacus, vel aliquet elit metus ac enim. Donec vitae consectetur turpis. Fusce ornare rhoncus nisi vitae consequat. 
+    </p></div>
+    <div class="item11">
+      <div class="elements">  <!---element-1---->
+        <img class="element-img3" src="./imgs/Icon2DSG-6.png" alt="img_icon-13">
+        <p class="element-text"><a href="#" target="">Ethics Code: How TTEC Does</a></p>
+      </div>
+      <div class="elements">  <!---element-2---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-14">
+        <p class="element-text"><a href="#" target="">Ethics & Compliance</a></p>
+      </div>
+      <div class="elements">  <!---element-3---->
+        <img class="element-img" src="./imgs/Icon2DSG-6.png" alt="img_icon-15">
+        <p class="element-text"><a href="#" target="">We Hear You (WHY)</a></p>
+      </div>
+    </div>
+  </div>
+</div>  <!------End--Collapse-2.3-------->
+
+  </div>
+</div>  <!-----End---Tabs-2-------->
+
+
+<div id="three" class="tabcontent">   <!--------Tabs-3-------->
+
+  <div class="main-paragraph"><p>Sed id ipsum ac massa egestas viverra. Nulla congue semper turpis, et finibus enim egestas ac. Fusce eleifend, turpis in vehicula tempor, ante justo pulvinar eros, in feugiat sem libero ac purus. Quisque porta neque nibh, dignissim vulputate magna accumsan ac. Aliquam ac porta felis, ac interdum dolor. Donec sit amet viverra magna. Nam laoreet augue in nunc pulvinar, at convallis urna semper. Donec ac ipsum purus. Cras mattis bibendum faucibus.</p>
+  <p class="paragraph-space">Praesent posuere vel ante at molestie. Quisque non vestibulum mauris. Nam dapibus tempus enim vel cursus. Suspendisse fringilla mattis vestibulum. Nam condimentum lacus a neque consequat scelerisque quis vitae diam. Aenean vitae tempus orci. Ut elementum magna iaculis, imperdiet magna id, placerat ligula. Curabitur quis massa odio.</p>
+  <p class="paragraph-space">Nulla malesuada fermentum ligula et congue. In hac habitasse platea dictumst. Aliquam massa dui, dignissim vitae eros at, pulvinar vehicula ligula. Proin placerat dui erat, at gravida est fringilla ornare. Mauris fringilla leo id facilisis facilisis. Donec dignissim quam ipsum, vitae convallis lectus ultrices at. Fusce non augue ac sem gravida fermentum vel nec mi. Quisque rhoncus libero purus, eu eleifend tortor sodales id. Suspendisse in justo sit amet dolor pharetra aliquet. </p>
+    </div>
+
+  <div class="imgbox">    <!--------Hover--Boxes------>  
+
+    <div id="WS-imagen1" class="animate__animated animate__fadeInLeft"> <!--------Box-3.1-------->
+      <a href="https://ttectalent.sumtotal.host/rcore/c/pillarRedirect?relyingParty=LM&url=app%2fmanagement%2fLMS_ActDetails.aspx%3fActivityId%3d179010%26UserMode%3d0" target="_blank"><div id="WS-info">
+        <p id="WS-headline">Onboarding Journey Roadmap – United States</p>
+        <p id="WS-descripcion"></p>
+        <img id="WS-arrow" src="/imgs_V2/arrow.png" alt="arrow">
+      </div></a>
+    </div> <!------End--Collapse-3.1-------->
+
+    <div id="WS-imagen2" class="animate__animated animate__fadeInUp"> <!--------Box-3.2-------->
+      <a href="https://ttectalent.sumtotal.host/rcore/c/pillarRedirect?relyingParty=LM&url=app%2fmanagement%2fLMS_ActDetails.aspx%3fActivityId%3d179069%26UserMode%3d0" target="_blank"><div id="WS-info">
+        <p id="WS-headline">Onboarding Journey Roadmap – India</p>
+        <p id="WS-descripcion"></p>
+        <img id="WS-arrow" src="./imgs_V2/arrow.png" alt="arrow">
+      </div></a>
+    </div> <!------End--Collapse-3.2-------->
+
+    <div id="WS-imagen3" class="animate__animated animate__fadeInRight"> <!--------Box-3.3-------->
+      <a href="https://ttectalent.sumtotal.host/rcore/c/pillarRedirect?relyingParty=LM&url=app%2fmanagement%2fLMS_ActDetails.aspx%3fActivityId%3d179081%26UserMode%3d0" target="_blank"><div id="WS-info">
+        <p id="WS-headline">Onboarding Journey Roadmap – Canada</p>
+        <p id="WS-descripcion"></p>
+        <img id="WS-arrow" src="/imgs_V2/arrow.png" alt="arrow">
+      </div></a>
+    </div> <!------End--Collapse-3.3-------->
+
+    <div id="WS-imagen4" class="animate__animated animate__fadeInRight"> <!--------Box-3.4-------->
+      <a href="https://ttectalent.sumtotal.host/core/pillarRedirect?relyingParty=LM&url=app%2Fmanagement%2FLMS_ActDetails.aspx%3FActivityId%3D218936%26UserMode%3D0" target="_blank"><div id="WS-info">
+        <p id="WS-headline">Onboarding Journey Roadmap – Philippines</p>
+        <p id="WS-descripcion"></p>
+        <img id="WS-arrow" src="/imgs_V2/arrow.png" alt="arrow">
+      </div></a>
+    </div> <!------End--Collapse-3.4-------->
+
+    <div id="WS-imagen5" class="animate__animated animate__fadeInRight"> <!--------Box-3.5-------->
+      <a href="https://ttectalent.sumtotal.host/core/pillarRedirect?relyingParty=LM&url=app%2Fmanagement%2FLMS_ActDetails.aspx%3FActivityId%3D218938%26UserMode%3D0" target="_blank"><div id="WS-info">
+        <p id="WS-headline">Onboarding Journey Roadmap – Australia</p>
+        <p id="WS-descripcion"></p>
+        <img id="WS-arrow" src="/imgs_V2/arrow.png" alt="arrow">
+      </div></a>
+    </div> <!------End--Collapse-3.5-------->
+
+    <div id="WS-imagen6" class="animate__animated animate__fadeInRight"> <!--------Box-3.6-------->
+      <a href="https://ttectalent.sumtotal.host/core/pillarRedirect?relyingParty=LM&url=app%2Fmanagement%2FLMS_ActDetails.aspx%3FActivityId%3D218937%26UserMode%3D0" target="_blank"><div id="WS-info">
+        <p id="WS-headline">Onboarding Journey Roadmap – EMEA</p>
+        <p id="WS-descripcion"></p>
+        <img id="WS-arrow" src="/imgs_V2/arrow.png" alt="arrow">
+      </div></a>
+    </div> <!------End--Collapse-3.6-------->
+
+
+  </div>  <!-------End-Hover--Boxes------>   
+</div>  <!-----End---Tabs-3-------->
+
+
+<div id="four" class="tabcontent">   <!--------Tabs-4-------->
+
+  <div class="content-coll">   
+    
+    <button class="collapsible">System and Tools – CX Nexus 4.1</button> <!--------Collapse-4.1-------->
+<div class="content">
+  <div class="grid-container tab1">  <!----1---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-32.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title2">CX Nexus</h2></div>
+    <div class="item5"><p class="text2">Morbi non ligula ligula. Praesent eleifend sagittis neque ut viverra. Proin eu dui tincidunt, aliquam tortor ac, laoreet augue. Maecenas at volutpat neque, et placerat diam.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to CX Nexus</span></a></p></div>
+  </div>
+  <div class="item13"><p class="pink2"><a href="#" target=""><span class="box-link">How to create alerts in  CX Nexus</span></a></p></div>
+
+</div>  <!------End--Collapse-4.1-------->
+
+<button class="collapsible">System and Tools – Teams 4.2</button>  <!--------Collapse-4.2-------->
+<div class="content">
+  <div class="grid-container tab1">  <!----1---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-50.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title1"><a href="#" target="">Teams</a></h2></div>
+    <div class="item5"><p class="text2">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dictum, mauris in maximus vestibulum, erat justo blandit neque, vel laoreet elit turpis condimentum magna. Suspendisse fringilla mattis vestibulum.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+  <div class="item13"><p class="pink2"><a href="#" target=""><span class="box-link">Quick Reference Guide</span></a></p></div>
+  
+</div>  <!------End--Collapse-4.2-------->
+
+<button class="collapsible">System and Tools – Lever 4.3</button>  <!--------Collapse-4.3-------->
+<div class="content">
+  <div class="grid-container tab1">  <!----1---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-30.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title1"><a href="#" target="">Lever: Hiring Manager Training</a></h2></div>
+    <div class="item5"><p class="text2">Mauris fringilla leo id facilisis facilisis. Donec dignissim quam ipsum, vitae convallis lectus ultrices at. Fusce non augue ac sem gravida fermentum vel nec mi. Quisque rhoncus libero purus, eu eleifend tortor sodales id. Suspendisse in justo sit amet dolor pharetra aliquet.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+  
+</div>  <!------End--Collapse-4.3-------->
+
+<button class="collapsible">System and Tools – Dynamics CRM 4.4</button>  <!--------Collapse-4.4-------->
+<div class="content">
+  <div class="grid-container tab1">  <!----1---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-31.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title1"><a href="#" target="">Dynamics Customer Relationship Management Basics</a></h2></div>
+    <div class="item5"><p class="text2">In in libero commodo, commodo neque eget, vestibulum augue. Sed lobortis, eros in euismod blandit, magna sapien sodales lacus, vel aliquet elit metus ac enim. Donec vitae consectetur turpis. Fusce ornare rhoncus nisi vitae consequat.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+
+  <!--------Divider--------->
+  <div><hr class="solid"></div>
+  <!------End--Divider--------->
+
+  <div class="grid-container tab1">  <!----2---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-31.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title1"><a href="#" target="">Dynamics Customer Relationship Management: Marketing</a></h2></div>
+    <div class="item5"><p class="text2">In in libero commodo, commodo neque eget, vestibulum augue. Sed lobortis, eros in euismod blandit, magna sapien sodales lacus, vel aliquet elit metus ac enim. Donec vitae consectetur turpis. Fusce ornare rhoncus nisi vitae consequat.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+
+  <!--------Divider--------->
+  <div><hr class="solid"></div>
+  <!------End--Divider--------->
+
+  <div class="grid-container tab1">  <!----3---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-31.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title1"><a href="#" target="">Dynamics Customer Relationship Management: Sales</a></h2></div>
+    <div class="item5"><p class="text2">In in libero commodo, commodo neque eget, vestibulum augue. Sed lobortis, eros in euismod blandit, magna sapien sodales lacus, vel aliquet elit metus ac enim. Donec vitae consectetur turpis. Fusce ornare rhoncus nisi vitae consequat.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+
+  <!--------Divider--------->
+  <div><hr class="solid"></div>
+  <!------End--Divider--------->
+
+  <div class="grid-container tab1">  <!----4---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-31.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title1"><a href="#" target="">Dynamics Customer Relationship Management: Solutions Engineers/Presales</a></h2></div>
+    <div class="item5"><p class="text2">In in libero commodo, commodo neque eget, vestibulum augue. Sed lobortis, eros in euismod blandit, magna sapien sodales lacus, vel aliquet elit metus ac enim. Donec vitae consectetur turpis. Fusce ornare rhoncus nisi vitae consequat.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+
+  <!--------Divider--------->
+  <div><hr class="solid"></div>
+  <!------End--Divider--------->
+
+  <div class="grid-container tab1">  <!----5---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-31.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title1"><a href="#" target="">Dynamics Customer Relationship Management: Management</a></h2></div>
+    <div class="item5"><p class="text2">TIn in libero commodo, commodo neque eget, vestibulum augue. Sed lobortis, eros in euismod blandit, magna sapien sodales lacus, vel aliquet elit metus ac enim. Donec vitae consectetur turpis. Fusce ornare rhoncus nisi vitae consequat.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+
+  <!--------Divider--------->
+  <div><hr class="solid"></div>
+  <!------End--Divider--------->
+
+  <div class="grid-container tab1">  <!----6---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-31.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title1"><a href="#" target="">Dynamics Customer Relationship Management: Customer Service</a></h2></div>
+    <div class="item5"><p class="text2">In in libero commodo, commodo neque eget, vestibulum augue. Sed lobortis, eros in euismod blandit, magna sapien sodales lacus, vel aliquet elit metus ac enim. Donec vitae consectetur turpis. Fusce ornare rhoncus nisi vitae consequat.
+    </p></div>
+    <div class="item7"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+
+  <!--------Divider--------->
+  <div><hr class="solid"></div>
+  <!------End--Divider--------->
+
+  
+  
+</div>  <!------End--Collapse-4.4-------->
+
+<button class="collapsible">System and Tools – Oracle 4.5</button>  <!--------Collapse-4.5-------->
+<div class="content">
+  <div class="grid-container tab1">  <!----7---->
+    <div class="item1"><h3 class="cont_subtitle"></h3></div>
+    <div class="item2"><img src="./imgs/ButtonDSG-2.png" class="gallery_img" alt="imgDSG-XX.png"></div>
+    <div class="item3"><p class="text1 pink"><span class="stickout2"></span></p></div>  
+    <div class="item4"><h2 class="cont_title2">Oracle</h2></div>
+    <div class="item5"><p class="text2 description"><a href="#" target=""><span class="box-link">Oracle</span></a> Suspendisse fermentum, metus nec dapibus gravida, velit sapien eleifend sapien, id molestie ipsum leo eu sem:
+    </p>
+      <ul class="interlist">
+        <li>Quisque nec massa fermentum</li>
+        <li>Nulla ullamcorper mi posuere</li>
+        <li>Vestibulum ante ipsum primis</li>
+        <li>Aenean sed pulvinar orci</li>
+        <li>Phasellus pulvinar quam sed nisl egestas</li>
+      </ul>
+    </div>
+
+    <div class="item6"><p class="text2">Morbi finibus ultrices dui ut vehicula. Nam id risus est:
+    </p>
+      <ul class="interlist">
+        <li>Vivamus ac consectetur nulla</li>
+        <li>PDonec cursus iaculis lobortis</li>
+        <li>Mauris risus risus imperdiet ut tincidunt</li>
+      </ul>
+    </div>
+    
+    <div class="item8"><p class="pink"><a href="#" target=""><span class="box-link">Go to Training</span></a></p></div>
+  </div>
+  
+</div> <!------End--Collapse-4.5-------->
+
+<button class="collapsible">Business Operations – Timekeeping 4.6</button>  <!--------Collapse-4.6-------->
+<div class="content">
+  <p class="extraText">Maecenas sit amet urna fringilla, dignissim mi sit amet, tristique erat. Aenean nec purus turpis. Vivamus odio lectus, accumsan a leo sed, fermentum faucibus purus. Sed molestie nisl a rhoncus auctor. Nulla ac sapien ac elit accumsan lobortis ut sed lectus. Pellentesque ligula mauris, euismod et commodo ut, maximus et enim. </p>
+
+  <table class="main-table">   <!---https://www.htmlquick.com/tutorials/tables/2.html--->
+
+    <tr class="tbox-table">
+      <td class="tbox-row"><img src="./imgs/Icon2DSG-6.png" alt="img_icon-19"></td>  <!----table-1---->
+      <td class="tbox-row title-row">Definitions of Time</td>
+      <td class="tbox-row" colspan="2">
+        <ul>
+          <li class="tbox-space">Billable – Hours that TTEC bills clients for</li>
+          <li class="tbox-space">Exception Time – Vacations, wellness, holidays, etc.</li>
+          <li class="tbox-space">Working hours – Business hours that are not billable to external clients</li>
+        </ul>  
+        </td>
+    </tr>
+
+    <tr class="tbox-table">
+      <td class="tbox-row"><img src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-6"></td>  <!----table-2---->
+      <td class="tbox-row title-row">Oracle Time & Labor</td>
+      <td class="tbox-row"><p class="text-row">Use Oracle Time & Labor (OTL) for billable hours and exception time daily. Billable employees are hired into:</p>
+        <ul>
+          <li class="tbox-space">Cisco and Google Managed Services Roles</li>
+          <li class="tbox-space">Cisco and Google Sales Engineers</li>
+          <li class="tbox-space">Analytics</li>
+          <li class="tbox-space">Consulting and IP Roles Globally (confirm with your manager, since systems vary based on project)</li>
+          <li class="tbox-space">Public Sector Sales Team</li>
+        </ul>  
+        <p class="text-row">Your manager will supply you with the project codes.</p>
+        </td>
+        <td class="tbox-row">
+          <ul>
+            <li class="tbox-space2"><a href="#" target="">Go to Oracle T&L</a></li>
+            <li class="tbox-space2"><a href="#" target="">Go to Oracle T&L training </a></li>
+            </ul>  
+        </td>
+    </tr>
+
+    <tr class="tbox-table">
+      <td rowspan="2" class="tbox-row"><img src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-7"></td>  <!----table-3---->
+      <td class="tbox-row title-row">Kronos – Hourly Employees</td>
+      <td class="tbox-row"><p>Employees who are paid on an hourly basis and eligible for overtime use Kronos for all working hours and exception time daily.</p></td>
+      <td class="tbox-row" rowspan="2">
+        <ul>
+          <li class="tbox-space2"><a href="#" target="">Go to Kronos</a></li>
+          <li class="tbox-space2"><a href="#" target="">Go to Kronos Mosaic space</a></li>
+          <li class="tbox-space2"><a href="#" target="">Go to Kronos training</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="tbox-table">
+      <td class="tbox-row title-row row-color1">Kronos – Support Salaried Employees</td>
+      <td class="tbox-row row-color1"><p class="text-row">Support salaried employees, who are not eligible for overtime, use Kronos for exception time only. Do NOT enter working hours in Kronos. These employees are hired into:</p>
+        <ul>
+          <li class="tbox-space">Sales & Marketing (except Public Sector)</li>
+          <li class="tbox-space">Sales Operations</li>
+          <li class="tbox-space">Other support roles globally</li>
+        </ul> 
+      </td>
+    </tr>
+
+    <tr class="tbox-table">
+      <td class="tbox-row row-color2"><img src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-8"></td>  <!----table-4---->
+      <td class="tbox-row title-row row-color2">Jira</td>
+      <td class="tbox-row row-color2" colspan="2" ><p class="text-row">Use Open Air for billable hours and exception time daily. Billable employees are hired into:</p>
+        <ul>
+          <li class="tbox-space">Amazon Connect</li>
+          <li class="tbox-space">Amazon Web Services</li>
+        </ul>
+        <p class="text-row">Your Jira credentials, instructions, and login information arrive via email. Your manager will supply you with the project codes.</p>
+      </td>
+    </tr>
+
+    <tr class="tbox-table">
+      <td class="tbox-row row-color1"><img src="./imgs/Icon2DSG-6.png" alt="Icon2DSG-9"></td>  <!----table-5---->
+      <td class="tbox-row title-row row-color1">Open Air</td>
+      <td class="tbox-row row-color1"><p class="text-row">Use Open Air for billable hours and exception time daily. Billable employees are hired into:</p>
+        <ul>
+          <li class="tbox-space">Microsoft</li>
+          <li class="tbox-space">Genesys</li>
+          <li class="tbox-space">Project Management</li>
+        </ul>  
+        <p class="text-row">You’ll receive your OpenAir login details and training during your first week.</p>
+        </td>
+        <td class="tbox-row row-color1">
+          <ul>
+            <li class="tbox-space2"><a href="#" target="">Go to OpenAir</a></li>
+            <li class="tbox-space2"><a href="#" target="">Go to OpenAir training</a></li>
+          </ul>
+        </td>
+    </tr>
+
+    <tr class="tbox-table">
+      <td class="tbox-row row-color2"><img src="./imgs/Icon2DSG-6.png" alt="img_icon-10"></td>  <!----table-6---->
+      <td class="tbox-row title-row row-color2">Changepoint PSA</td>
+      <td class="tbox-row row-color2" colspan="2" ><p class="text-row">Changepoint PSA  Coming in 2024!</p>
+      </td>
+    </tr>
+
+  </table>
+
+</div>  <!------End--Collapse-4.6-------->
+
+<button class="collapsible">Business Operations – Travel and Expenses 4.7</button>  <!--------Collapse-4.7-------->
+<div class="content">
+  <p class="extraText">Quisque nec massa fermentum, bibendum augue vestibulum, placerat ligula. Fusce id congue tortor. Donec et varius augue. Vivamus sed dui urna. Fusce euismod cursus arcu, a rutrum ipsum finibus sit amet. Nunc justo lorem, varius et purus ut, finibus condimentum sapien.</p>
+
+  <table class="main-table">   <!---https://www.htmlquick.com/tutorials/tables/2.html--->
+    <tr class="tbox-table">
+      <td class="tbox-row"><img src="./imgs/Icon2DSG-6.png" alt="img_icon-27"></td>  <!----table-1---->
+      <td class="tbox-row title-row">Create a Travel Profile</td>
+      <td class="tbox-row"><p class="text-row">All business travel must be booked using the Global Travel Desk (Concur). Contact the Global Travel Desk (traveldesk@ttec.com) to set up your profile. You’ll receive instructions with the next steps and links to follow. Normally, profiles are created automatically approximately 2-3 weeks from your date of hire.
+        If you are trying to access Concur before your profile is automatically created, you may need help setting up your profile manually with a temporary password to book your business travel.</p>
+        <p class="text-row">Once you have a travel profile, please visit the <a href="#" target=""><span class="tbox-link2">Travel Desk space</span></a> on Mosaic for additional travel information, policies, and the latest updates and processes.</p>
+        </td>
+    </tr>
+
+    <tr class="tbox-table">
+      <td class="tbox-row"><img src="./imgs/Icon2DSG-6.png" alt="img_icon-28"></td>  <!----table-2---->
+      <td class="tbox-row title-row">Apply for a Corporate Credit Card</td>
+      <td class="tbox-row"><p class="text-row">Employees in countries outside the US, please confirm with your HCBP whether your country follows this process.</p>
+        <ol>
+          <li class="tbox-space2">Submit a ticket on <a href="#" target=""><span class="tbox-link2">ASK Now</span></a> > <span class="letterBold">Other Departments</span> > <span class="letterBold">Accounting</span> > <span class="letterBold">Global Procurement</span> > <span class="letterBold">Travel & Entertainment (T&C Card)</span>.
+            <p class="tbox-space3">Type of Request: <span class="letterBold">Card Application</span></p>
+          </li>
+          <li class="tbox-space2">In the comments section, indicate that you need to apply for a Corporate Credit Card.</li>
+          <li class="tbox-space2">After creating the ticket, you’ll receive an email from a Corporate Credit Administrator with the forms you need to complete and detailed instructions. Please allow 48 hours for a response.
+          </li>
+          <li class="tbox-space2">Submit a second ticket on <a href="#" target=""><span class="tbox-link2">ASK Now</span></a> > <span class="letterBold">Other Departments</span> > <span class="letterBold">Accounting</span> > <span class="letterBold">Global Procurement</span> > <span class="letterBold">Travel & Entertainment (T&C Card)</span>.
+            <p class="tbox-space3">Type of Request: <span class="letterBold">Card Application</span></p>
+          </li>
+          <li class="tbox-space">Attach to the second ticket the completed forms:
+            <ul>
+              <li> <span class="letterBold">Application Form</span> (to be attached to the ticket except for online application)</li>
+              <li><span class="letterBold">VP/SVP Approval</span></li>
+              <li><span class="letterBold">Corporate Card Agreement (CCA) Form</span></li>
+            </ul>
+          </li>
+        </ol>  
+        <p class="text-row">Feel free to review the <a href="#" class="tbox-link2" target="">Corporate Card space</a> on Mosaic for more information and contact details.</p>
+        </td>
+    </tr>
+
+    <tr class="tbox-table">
+      <td class="tbox-row row-color1"><img src="./imgs/Icon2DSG-6.png" alt="img_icon-29"></td>  <!----table-3---->
+      <td class="tbox-row title-row row-color1">Request Access to iExpense</td>
+      <td class="tbox-row"><p class="text-row extraText">iExpense is an Oracle-based tool that lets you submit business expenses for reimbursement.</p>
+        <p  class="tbox-space4"> To request access to iExpense, please follow these steps:</p>
+        <ol>
+          <li class="tbox-space2">Ensure that you have a company email address.
+          </li>
+          <li class="tbox-space2">Successfully complete the <a href="#" target=""><span class="tbox-link2">Oracle iExpense: Completing a Travel and Entertainment Expense Report </span></a> course on TTEC Digital Talent.</li>
+          <li class="tbox-space2">Submit a ticket on <a href="#" target=""><span class="tbox-link2">ASK Now </span></a> > <span class="letterBold">Information Technology</span> > <span>Applications and Software</span> > <span class="letterBold">Oracle Systems and Support Request</span>.
+          <p class="tbox-space3">Service Catalog:<span class="letterBold"> iExpense</span></p>            
+          </li>
+          <li class="tbox-space2">Attach the certificate of completion that proves you completed the course.
+          </li>
+        </ol>  
+        <p class="text-row">Once you have access to iExpense, please submit your expenses by following the steps in this <a href="#" class="tbox-link2" target="">job aid.</a> </p>
+        </td>
+    </tr>
+
+    <tr class="tbox-table">
+      <td class="tbox-row"><img src="./imgs/Icon2DSG-6.png" alt="img_icon-30"></td>  <!----table-4---->
+      <td class="tbox-row title-row">Link Your Card to iExpense</td>
+      <td class="tbox-row"><p class="text-row">Once your card arrives, link your card to iExpense in Oracle. To link your card to iExpense, submit a ticket on <a href="#" target=""><span class="tbox-link2">ASK Now </span></a> > <span class="letterBold">Other Departments</span> > <span class="letterBold">Accounting</span> > <span class="letterBold">Global Procurement</span> > <span class="letterBold">Travel & Entertainment (T&C Card).</span> For the type of request, select the <span class="letterBold">Card Linking</span> option.
+        </p>
+        <p class="text-row"><span class="letterBold">NOTE:</span> You'll need to reference the last five digits on your card.</p>
+        </td>
+    </tr>
+  
+  </table>
+
+</div>  <!------End--Collapse-4.7-------->
+
+
+  </div>
+</div>  <!-----End---Tabs-4-------->
+
+</section>
+
+<!--------Back to the Top Button-------->
+
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<!-- Test the scroll -->
+<div style="height:50px;">
+
+
+<!-------Java-Script-Tabs-------->
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<!-------Java-Script-Collapse-------->
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active1");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script> 
+  
+
+<!-------Java-Script-Top Button-------->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                <script>
+                // ===== Scroll to Top ==== 
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(200);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 800);
+            });
+                </script>
+
+
+
+  </body>  <!--------------HTML-Ends-Here------------------>
+  
+</html>
+
